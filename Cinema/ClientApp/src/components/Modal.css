@@ -1,0 +1,58 @@
+.custommodal {
+    background-color: rgba(163, 137, 106, 0.849);
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.custommodal.open {
+   display: block;
+}
+
+.custommodal .position-center {
+    position: fixed;
+    /* background-color: #fff; */
+    width: 600px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.custommodal .position-center i {
+    font-size: 150px;
+}
+/* .body {
+    margin: 100px auto;
+    font: 90%/20 sans-serif;
+    text-align: center;
+  }
+   */
+  /* h3 {
+    font-size:100em;
+    margin: 300px 0;
+  } */
+  
+  /* ul { 
+    padding: 0;
+  } */
+  
+  /* li {
+    list-style-type: none;
+    display: inline-block;
+  } */
+  
+  a {
+    text-decoration: none;
+    color: #333;
+    font-size: 10em;
+    display: block;
+    padding: 10px 15px;
+    margin: 10px ;
+    border-right: 10px solid whitesmoke;
+    transition: font-weight .20s;
+  }
+  
+  a:hover, a.active {
+    font-size: 30px;  
+  }
