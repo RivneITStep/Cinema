@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import { callPlayer, getSDK } from '../../utils'
-import createSinglePlayer from '../../singlePlayer'
+import { callPlayer, getSDK } from '../../Player/utils'
+import createSinglePlayer from '../../Player/singlePlayer'
 
 const SDK_URL = 'https://w.soundcloud.com/player/api.js'
 const SDK_GLOBAL = 'SC'
@@ -84,6 +84,7 @@ export class SoundCloud extends Component {
     }
     return (
       <iframe
+        title="asd"
         ref={this.ref}
         src={`https://w.soundcloud.com/player/?url=${encodeURIComponent(this.props.url)}`}
         style={style}

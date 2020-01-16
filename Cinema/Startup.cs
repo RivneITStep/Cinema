@@ -1,7 +1,8 @@
-using CRUDCore.DAL.Entities;
+using Cinema.DAL.Entities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,8 +12,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
-namespace CRUDCore
+ 
+namespace Cinema
 {
     public class Startup
     {
@@ -26,9 +27,12 @@ namespace CRUDCore
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<EFContext>(opt =>
-                opt.UseSqlServer(Configuration
-                    .GetConnectionString("DefaultConnection")));
+            //services.AddDbContext<EFContext>(opt =>
+            //           opt.UseSqlServer(Configuration
+            //               .GetConnectionString("DefaultConnection")));
+
+            services.AddDbContext<EFContext>(options =>
+            options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<DbUser, DbRole>(options => options.Stores.MaxLengthForKeys = 128)
                 .AddEntityFrameworkStores<EFContext>()
@@ -53,9 +57,15 @@ namespace CRUDCore
                     ValidateIssuerSigningKey = true
                 };
             });
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            services.Configure<IdentityOptions>(options =>
+            {
+                // Default Password settings.
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequiredUniqueChars = 0;
+                options.User.RequireUniqueEmail = true;
+            });
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
@@ -66,6 +76,11 @@ namespace CRUDCore
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseForwardedHeaders(new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedFor | ForwardedHeaders.XForwardedProto
+            });
+
             app.UseAuthentication();
             if (env.IsDevelopment())
             {
@@ -74,28 +89,20 @@ namespace CRUDCore
             else
             {
                 app.UseExceptionHandler("/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
+            app.UseStaticFiles();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller}/{action=Index}/{id?}");
             });
-
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            app.UseStaticFiles();
-            app.UseMvc();
 
             app.UseSpa(spa =>
             {
@@ -106,8 +113,6 @@ namespace CRUDCore
                     spa.UseReactDevelopmentServer(npmScript: "start");
                 }
             });
-
-           // SeederDB.SeedDataByAS(app.ApplicationServices);
         }
     }
 }

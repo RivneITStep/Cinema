@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
-import { getSDK, isMediaStream } from '../../utils'
-import createSinglePlayer from '../../singlePlayer'
+import { getSDK, isMediaStream } from '../../Player/utils'
+import createSinglePlayer from '../../Player/singlePlayer'
 // формати
 const IOS = typeof navigator !== 'undefined' && /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream
 const AUDIO_EXTENSIONS = /\.(m4a|mp4a|mpga|mp2|mp2a|mp3|m2a|m3a|wav|weba|aac|oga|spx)($|\?)/i

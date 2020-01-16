@@ -1,8 +1,8 @@
 //плеїр ютуба
 import React, { Component } from 'react'
 
-import { callPlayer, getSDK, parseStartTime, parseEndTime } from '../../utils'
-import createSinglePlayer from '../../singlePlayer'
+import { callPlayer, getSDK, parseStartTime, parseEndTime } from '../../Player/utils'
+import createSinglePlayer from '../../Player/singlePlayer'
 
 const SDK_URL = 'https://www.youtube.com/iframe_api'
 const SDK_GLOBAL = 'YT'
@@ -62,7 +62,7 @@ export class YouTube extends Component {
         events: {
           onReady: () => {
             if (loop) {
-              this.player.setLoop(true) // Enable playlist looping
+              this.player.setLoop(true) 
             }
             this.props.onReady()
           },
@@ -85,7 +85,7 @@ export class YouTube extends Component {
     if (data === ENDED) {
       const isPlaylist = !!this.callPlayer('getPlaylist')
       if (loop && !isPlaylist) {
-        this.play() // Only loop manually if not playing a playlist
+        this.play() 
       }
       onEnded()
     }

@@ -10,24 +10,36 @@ $gutter-width: 20px;
 
 .section {
   display: inline-block;
-  max-width: $column-width;
-  margin: $gutter-width;
+  max-width: column-width;
+  margin: gutter-width;
   text-align: left;
   vertical-align: top;
+  background-color: rgb(28, 34, 49);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .filmtext{
   color: white;
   font-size:2em;
+  
 }
 .player-wrapper {
-  width: 480px;
-  height: 270px;
+  width: 580px;
+  height: 370px;
+  
+  
 }
-
+.player-wrapper1 {
+  width: 580px;
+  height: 370px;
+  
+  
+}
 .react-player {
   margin-bottom: 10px;
-  background: rgba(0, 0, 0, .1);
+  background: rgb(3, 1, 1);
+  border-radius: 20px;
 }
 
 .faded {
@@ -40,3 +52,37 @@ $gutter-width: 20px;
 .state{
   float: left;
 }
+
+.textarea{
+  margin-top: 150px;
+  width: 1200px;
+  height: 70px;
+  background-color: rgb(45, 49, 70);
+  color: rgb(255, 255, 255);
+}
+.addComment{
+  float: right;
+  background-color: #3cce7b;
+  color: rgb(255, 255, 255);
+  border-radius: 0px;
+}
+.div{
+  width: 600px;
+  float: inherit;
+}
+
+.comment{
+  color: rgb(255, 255, 255);
+  float: left;
+}
+
+.CommentPlace{
+  width: 1200px;
+  height: 70px;
+  background-color: rgb(45, 49, 70);
+  color: rgb(255, 255, 255);
+}
+
+p{
+  margin: 0px;
+} 

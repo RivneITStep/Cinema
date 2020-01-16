@@ -1,30 +1,23 @@
 import React, { Component } from 'react';
+import { Col, Row } from 'react-bootstrap';
+import LoginForm from './LoginForm';
+import { login } from '../../action/authAction';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 class LoginPage extends Component {
-    state = {}
     render() {
+        const { login }=this.props;
         return (
-            <div classNames="container register-form">
-                <div classNames="form">
-                    <div id="form-content">
-                        <div class="row">
-                            <div classNames="col-md-6">
-                                <div classNames="form-group">
-                                    <input type="text" classNames="form-control" placeholder="Nikname *" value="" />
-                                </div>
-                                <br />
-                                <div classNames="form-group">
-                                    <input type="text" classNames="form-control" placeholder="Password *" value="" />
-                                </div>
-                                <br />
-                            </div>
-                            <button type="button" class="btnSubmit">Submit</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <Row>
+                <Col md={4} mdoffset={3}>
+                    <LoginForm login={login}/>
+                </Col>
+            </Row>
         );
     }
 }
-
-export default LoginPage;
+LoginPage.propTypes = {
+    login: PropTypes.func.isRequired
+}
+export default connect(null, {login})(LoginPage);

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CRUDCore.ViewModels
+namespace Cinema.ViewModels
 {
     public class UserItemViewModel
     {

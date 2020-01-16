@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace CRUDCore.Migrations
+namespace Cinema.Migrations
 {
     public partial class AdddefaulttabelsASPNETItentity : Migration
     {

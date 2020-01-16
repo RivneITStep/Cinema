@@ -1,24 +1,15 @@
-#note
-{
-    text-align: center;
-    height: 80px;
-    background: -webkit-linear-gradient(right, #1d3655, #000000);
-    color: #fff;
-    font-weight: bold;
-    line-height: 80px;
-}
-#form-content
+#form-content2
 {
     padding: 5%;
-    border: 1px solid #ced4da;
     margin-bottom: 2%;
+    background: url(../../image/container-bg.png) no-repeat;
+    background-size:contain;
+    width: 300%;
+    height: 700px;
 }
-input{
-    border-radius:1.5rem;
-}
-.btnSubmit
+
+.btnSubmit2
 {
-    float: right;
     border:none;
     border-radius:1.5rem;
     padding: 1%;
@@ -26,10 +17,13 @@ input{
     cursor: pointer;
     background: -webkit-linear-gradient(right, #1d3655, #000000);
     color: #fff;
+    margin-top:60px;
+    margin-left:80%;
+
 }
-.row{
-    float: right;
+#row2{
     margin: 5px;
-    margin-top: 150px;
-    margin-right: 150px;
+    margin-top: 120px;
+    margin-left: 80%;
+    width: 200px;
 }

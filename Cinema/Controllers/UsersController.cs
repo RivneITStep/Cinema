@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using CRUDCore.DAL.Entities;
-using CRUDCore.ViewModels;
+using Cinema.DAL.Entities;
+using Cinema.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace CRUDCore.Controllers
+namespace Cinema.Controllers
 {
     [Produces("application/json")]
     [Route("api/[controller]")]
