@@ -1,0 +1,29 @@
+#form-content2
+{
+    padding: 5%;
+    margin-bottom: 2%;
+    background: url(../../image/container-bg.png) no-repeat;
+    background-size:contain;
+    width: 300%;
+    height: 700px;
+}
+
+.btnSubmit2
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: -webkit-linear-gradient(right, #1d3655, #000000);
+    color: #fff;
+    margin-top:60px;
+    margin-left:80%;
+
+}
+#row2{
+    margin: 5px;
+    margin-top: 120px;
+    margin-left: 80%;
+    width: 200px;
+}

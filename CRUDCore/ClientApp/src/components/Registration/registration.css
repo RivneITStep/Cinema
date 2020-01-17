@@ -1,0 +1,50 @@
+#form-content
+{
+    padding: 5%;
+    margin-bottom: 2%;
+    background: url(../../image/container-bg.png) no-repeat;
+    background-size:contain;
+    height: 700px;
+    z-index: 0;
+}
+
+.btnSubmit
+{
+    border:none;
+    border-radius:1.5rem;
+    padding: 1%;
+    width: 20%;
+    cursor: pointer;
+    background: -webkit-linear-gradient(right, #1d3655, #000000);
+    color: #fff;
+    margin-top:60px;
+    margin-left:77%;
+
+}
+#row{
+    margin-top : 68px;
+    margin-left: 77%;
+    width: 200px;
+}
+.notice-success {
+    background: #67b11c url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/tick_2.png") 20px 50% no-repeat;
+    border: 2px solid #467813;
+    border-radius: 5px;
+    color: #fff;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    padding: 15px 20px 15px 50px;
+  }
+  @media (max-width: 990px)
+{
+    .form-control{
+        width: 100px;
+    }
+    #row{
+        width: 100px;
+        margin-top: 0px;
+    }
+    #row1{
+        margin-left: 77%;
+        margin-top: 53px;
+    }
+}

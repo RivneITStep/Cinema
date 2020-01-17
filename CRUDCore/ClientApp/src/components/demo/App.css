@@ -1,0 +1,88 @@
+$column-width: 480px;
+$gutter-width: 20px;
+
+.app {
+  margin: auto;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-align: center;
+}
+
+.section {
+  display: inline-block;
+  max-width: column-width;
+  margin: gutter-width;
+  text-align: left;
+  vertical-align: top;
+  background-color: rgb(28, 34, 49);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.filmtext{
+  color: white;
+  font-size:2em;
+  
+}
+.player-wrapper {
+  width: 580px;
+  height: 370px;
+  
+  
+}
+.player-wrapper1 {
+  width: 580px;
+  height: 370px;
+  
+  
+}
+.react-player {
+  margin-bottom: 10px;
+  background: rgb(3, 1, 1);
+  border-radius: 20px;
+}
+
+.faded {
+  color: rgba(0, 0, 0, .5);
+}
+
+.footer {
+  margin: $gutter-width;
+}
+.state{
+  float: left;
+}
+
+.textarea{
+  margin-top: 150px;
+  width: 1200px;
+  height: 70px;
+  background-color: rgb(45, 49, 70);
+  color: rgb(255, 255, 255);
+}
+.addComment{
+  float: right;
+  background-color: #3cce7b;
+  color: rgb(255, 255, 255);
+  border-radius: 0px;
+}
+.div{
+  width: 600px;
+  float: inherit;
+}
+
+.comment{
+  color: rgb(255, 255, 255);
+  float: left;
+}
+
+.CommentPlace{
+  width: 1200px;
+  height: 70px;
+  background-color: rgb(45, 49, 70);
+  color: rgb(255, 255, 255);
+}
+
+p{
+  margin: 0px;
+} 
