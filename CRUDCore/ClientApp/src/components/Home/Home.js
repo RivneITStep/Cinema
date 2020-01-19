@@ -19,9 +19,10 @@ class Home extends Component {
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
         return (
             <div className="main">
+                  
                 <div className="horizontal-scroll-wrapper squares">
-
-                    <div class="small_first" id="web">
+                
+                    <div class="small" id="web">
                         <div>
                             <p>{Film_names[0]}</p>
                         </div>
@@ -30,7 +31,7 @@ class Home extends Component {
                             <p>Год:&nbsp;2010</p>
                         </div>
                     </div>
-
+                   
                     <div class="small" id="web">
                         <div>
                             <p>{Film_names[1]}</p>
@@ -52,8 +53,11 @@ class Home extends Component {
                     <div>item 6</div>
                     <div>item 7</div>
                     <div>item 8</div>
-                </div>
+              
+                    
+                   
                 <span onclick="window.scroll(0,0);">^^^^</span>
+                </div>
             </div>
         );
     }
