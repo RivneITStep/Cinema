@@ -19,10 +19,9 @@ import './App.css';
 function App() {
   return (
 
-    <Layout>
+     <Layout>
       <Helmet>
         <style>{'body {background-image: linear-gradient(180deg,#1d3655, #000000 70%,#1d3655) ;background-attachment: fixed; no-repeat}'}</style>
-        
       </Helmet>
       <Switch>
       {/* <Admin dataProvider={dataProvider}>

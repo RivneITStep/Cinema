@@ -53,10 +53,6 @@ class Home extends Component {
                     <div>item 6</div>
                     <div>item 7</div>
                     <div>item 8</div>
-              
-                    
-                   
-                <span onclick="window.scroll(0,0);">^^^^</span>
                 </div>
             </div>
         );

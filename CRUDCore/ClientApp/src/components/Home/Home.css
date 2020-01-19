@@ -98,7 +98,7 @@ a:hover, a.active {
   width: calc(1150px + 1px);
   max-height: 2000px;
    padding-top: 700px; 
-   /* background: #abc;  */
+    /* background: #abc;   */
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-transform: rotate(-90deg) translateY(-250px);
