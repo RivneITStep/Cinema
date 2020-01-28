@@ -11,18 +11,45 @@ class NavMenu extends Component {
         return (
             <header>
                 <div id="base_menu">
-                    <div class="flip">
-                        <div class="flip-inner">
-                            <div class="flip-front">
-                                <Link className="ped"></Link>
+                    <div className="flip">
+                        <div className="flip-inner">
+                            <div className="flip-front">
+                                <Link className="ped" to="/"></Link>
                             </div>
-                            <div class="flip-back">
-                            <Link className="ped"></Link>
+                            <div className="flip-back">
+                                <Link className="ped" to="/"></Link>
                             </div>
                         </div>
                     </div>
+                    {/* ////// */}
+                    <label className="dropdown">
 
+                        <div className="dd-button">
+                            Dropdown
+                        </div>
+
+                        <input type="checkbox" className="dd-input" id="test" />
+
+                        <ul className="dd-menu">
+                            <li>Action</li>
+                            <li>Another action</li>
+                            <li>Something else here</li>
+                            <li className="divider"></li>
+
+                        </ul>
+
+                    </label>
+                    {/* /////// */}
+                    <div className="search-button">
+                        <div className="container">
+                            <span className="lupa">
+                                <i className="fa fa-search"></i>
+                            </span>
+                            <input type="search" id="search" placeholder="Поиск по сайту" />
+                        </div>
+                    </div>
                 </div>
+
 
                 <div className="hamburger-menu">
                     <input id="menu__toggle" type="checkbox" />

@@ -21,9 +21,9 @@ class Home extends Component {
             <div className="main">
                 <div id="container">
                     <div id="container2">
-                        <div class="box one">
+                        <div className="box one">
                             <div>
-                                <div class="small" id="web">
+                                <div className="small" id="web">
                                     <div>
                                         <p align="center">{Film_names[0]}</p>
                                     </div>
@@ -34,9 +34,9 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div class="box two">
+                        <div className="box two">
                             <div>
-                                <div class="small" id="web">
+                                <div className="small" id="web">
                                     <div>
                                         <p align="center">{Film_names[1]}</p>
                                     </div>
@@ -47,10 +47,10 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div class="box three">
+                        <div className="box three">
                             <div>
                             <div>
-                                <div class="small" id="web">
+                                <div className="small" id="web">
                                     <div>
                                         <p align="center"> {Film_names[2]}</p>
                                     </div>
@@ -61,13 +61,13 @@ class Home extends Component {
                             </div>
                             </div>
                         </div>
-                        <div class="box four"><div>тест</div></div>
-                        <div class="box two"><div>1</div></div>
-                        <div class="box three"><div>2</div></div>
-                        <div class="box four"><div>3</div></div>
-                        <div class="box two"><div>4</div></div>
-                        <div class="box three"><div>5</div></div>
-                        <div class="box four"><div>6</div></div>
+                        <div className="box four"><div>тест</div></div>
+                        <div className="box two"><div>1</div></div>
+                        <div className="box three"><div>2</div></div>
+                        <div className="box four"><div>3</div></div>
+                        <div className="box two"><div>4</div></div>
+                        <div className="box three"><div>5</div></div>
+                        <div className="box four"><div>6</div></div>
                     </div>
                 </div>
             </div>
