@@ -10,15 +10,29 @@ class NavMenu extends Component {
         const { isAuthenticated, user } = this.props.auth;
         return (
             <header>
+                <div id="base_menu">
+                    <div class="flip">
+                        <div class="flip-inner">
+                            <div class="flip-front">
+                                <Link className="ped"></Link>
+                            </div>
+                            <div class="flip-back">
+                            <Link className="ped"></Link>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
                 <div className="hamburger-menu">
                     <input id="menu__toggle" type="checkbox" />
                     <label className="menu__btn" htmlFor="menu__toggle">
                         <span></span>
                     </label>
                     <ul className="menu__box">
-                    <li className="nav-item">
-                        <img src="../../../public/favico_1.ico" alt="asd"/>
-                    </li>
+                        <li className="nav-item">
+                            <img src="../../../public/favico_1.ico" alt="asd" />
+                        </li>
                         <li className="nav-item">
                             <Link className="menu__item" to="/">CiNeMa</Link>
                         </li>
