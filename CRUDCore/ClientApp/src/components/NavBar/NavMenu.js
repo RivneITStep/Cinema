@@ -31,11 +31,30 @@ class NavMenu extends Component {
                         <input type="checkbox" className="dd-input" id="test" />
 
                         <ul className="dd-menu">
-                            <li>Action</li>
-                            <li>Another action</li>
-                            <li>Something else here</li>
-                            <li className="divider"></li>
-
+                            <li>аниме</li>
+                            <li>биографический</li>
+                            <li>боевик</li>
+                            <li>вестерн</li>
+                            <li>военный</li>
+                            <li>детектив</li>
+                            <li>детский</li>
+                            <li>документальный</li>
+                            <li>драма</li>
+                            <li>исторический</li>
+                            <li>кинокомикс</li>
+                            <li>комедия</li>
+                            <li>короткометражный</li>
+                            <li>криминал</li>
+                            <li>мелодрама</li>
+                            <li>мистика</li>
+                            <li>мультфильм</li>
+                            <li>научный</li>
+                            <li>приключения</li>
+                            <li>семейный</li>
+                            <li>триллер</li>
+                            <li>ужасы</li>
+                            <li>фантастика</li>
+                            <li>фэнтези</li>
                         </ul>
 
                     </label>
