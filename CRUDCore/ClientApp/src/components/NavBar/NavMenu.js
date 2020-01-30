@@ -10,6 +10,7 @@ class NavMenu extends Component {
         const { isAuthenticated, user } = this.props.auth;
         return (
             <header>
+
                 <div id="base_menu">
                     <div className="flip">
                         <div className="flip-inner">
@@ -30,7 +31,7 @@ class NavMenu extends Component {
 
                         <input type="checkbox" className="dd-input" id="test" />
 
-                        <ul className="dd-menu">
+                        <form className="dd-menu">
                             <li>аниме</li>
                             <li>биографический</li>
                             <li>боевик</li>
@@ -55,9 +56,10 @@ class NavMenu extends Component {
                             <li>ужасы</li>
                             <li>фантастика</li>
                             <li>фэнтези</li>
-                        </ul>
+                        </form>
 
                     </label>
+
                     {/* /////// */}
                     <div className="search-button">
                         <div className="container">

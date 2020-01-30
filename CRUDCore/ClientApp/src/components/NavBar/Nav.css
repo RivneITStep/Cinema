@@ -39,10 +39,10 @@
   height: 100%;
   backface-visibility: hidden;
   }
-  .flip-front {
-  /* background-color: #cccccc;
-  color: #111111; */
-  }
+  /* .flip-front {
+  background-color: #cccccc;
+  color: #111111; 
+  } */
   .flip-back {
   /* background-color: #8ebf42;
   color: #eeeeee; */
@@ -84,7 +84,7 @@
     top: 8px;
   }
   /* контейнер меню */
-.menu__box {
+ .menu__box {
     display: block;
     position: fixed;
     visibility: hidden;
@@ -97,13 +97,15 @@
     list-style: none;
     text-align: center;
     background: url(../Registration/Images/betmen.jpg) ;
-    -moz-background-size: 100%; /* Firefox 3.6+ */
-    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
-    -o-background-size: 100%; /* Opera 9.6+ */
-    background-size: 100%; /* Современные браузеры */
+    -moz-background-size: 100%; 
+    -webkit-background-size: 100%;
+    -o-background-size: 100%; 
+    background-size: 100%;
     box-shadow: 1px 0px 6px rgb(0, 0, 0);
     z-index: 1;
-  }
+  } 
+
+
   /* элементы меню */
   .menu__item {
     display: block;
@@ -229,7 +231,6 @@ a:hover {
 }
 
 /* Dropdown */
-
 .dropdown {
   display: inline-block;
   position: relative;
@@ -258,7 +259,6 @@ a:hover {
   position: absolute;
   top: 50%;
   right: 15px;
-  transform: translateY(-50%);
   width: 0; 
   height: 0; 
   border-left: 5px solid transparent;
@@ -278,7 +278,8 @@ a:hover {
 
 .dd-menu {
   position: absolute;
-  top: 100%;
+  top: 700%;
+  left: -500px;
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 0;
@@ -287,8 +288,9 @@ a:hover {
   background-color: #8727ad;
   list-style-type: none;
   margin-left: 0px;
-  width:100%;
+  width:205%;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  z-index:99999999;
 }
 
 .dd-input + .dd-menu {
@@ -327,4 +329,68 @@ a:hover {
 
 height: 100px !important;
 
+}
+
+
+.dd-menu{
+  animation-name: dd-menu;
+  -webkit-animation-name: dd-menu; 
+
+  animation-duration: 3s; 
+  -webkit-animation-duration: 3s;
+
+  animation-timing-function: ease-out;    
+  -webkit-animation-timing-function: ease-out;    
+
+  transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;         
+}
+
+@keyframes dd-menu {
+  0% {
+      transform: scaleY(0.1);
+  }
+  40% {
+      transform: scaleY(1.02);
+  }
+  60% {
+      transform: scaleY(0.98);
+  }
+  80% {
+      transform: scaleY(1.01);
+  }
+  100% {
+      transform: scaleY(0.98);
+  }               
+  80% {
+      transform: scaleY(1.01);
+  }
+  100% {
+      transform: scaleY(1);
+  }                           
+}
+
+@-webkit-keyframes dd-menu {
+  0% {
+      -webkit-transform: scaleY(0.1);
+  }
+  40% {
+      -webkit-transform: scaleY(1.02);
+  }
+  60% {
+      -webkit-transform: scaleY(0.98);
+  }
+  80% {
+      -webkit-transform: scaleY(1.01);
+  }
+  100% {
+      -webkit-transform: scaleY(0.98);
+  }               
+  80% {
+      -webkit-transform: scaleY(1.01);
+  }
+  100% {
+      -webkit-transform: scaleY(1);
+  }       
 }
