@@ -4,10 +4,12 @@ import { connect } from "react-redux";
 import PropTypes from 'prop-types';
 import { logout } from "../../action/authAction";
 import './Nav.css'
+
 class NavMenu extends Component {
     state = {}
     render() {
         const { isAuthenticated, user } = this.props.auth;
+
         return (
             <header>
 
@@ -23,15 +25,10 @@ class NavMenu extends Component {
                         </div>
                     </div>
                     {/* ////// */}
-                    <label className="dropdown">
+                        <input type="checkbox" id="toggle" />
+                        <label className="label" for="toggle">Genres</label>
 
-                        <div className="dd-button">
-                            Dropdown
-                        </div>
-
-                        <input type="checkbox" className="dd-input" id="test" />
-
-                        <form className="dd-menu">
+                        <dialog >
                             <li>аниме</li>
                             <li>биографический</li>
                             <li>боевик</li>
@@ -56,9 +53,8 @@ class NavMenu extends Component {
                             <li>ужасы</li>
                             <li>фантастика</li>
                             <li>фэнтези</li>
-                        </form>
-
-                    </label>
+                            <label className="close" for="toggle">close overlay</label>
+                        </dialog>
 
                     {/* /////// */}
                     <div className="search-button">
@@ -78,9 +74,6 @@ class NavMenu extends Component {
                         <span></span>
                     </label>
                     <ul className="menu__box">
-                        <li className="nav-item">
-                            <img src="../../../public/favico_1.ico" alt="asd" />
-                        </li>
                         <li className="nav-item">
                             <Link className="menu__item" to="/">CiNeMa</Link>
                         </li>
@@ -111,7 +104,7 @@ class NavMenu extends Component {
                 {/* <div >
                     <p><img src="Registration/Images/home.png" alt/></p>
                 </div> */}
-            </header>
+            </header >
         );
     }
 }
