@@ -13,7 +13,7 @@ class Home extends Component {
         e.preventDefault();
         console.log('-----перехід на іншу сторінку------');
         history.push('/user/add');
-    }
+    } 
     render() {
         //console.log($"{u.Id}.{u.UserName} - {u.Email}");
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
@@ -27,7 +27,7 @@ class Home extends Component {
                                     <div>
                                         <p align="center">{Film_names[0]}</p>
                                     </div>
-                                    <Link className="foto" to="/Application" ></Link>
+                                    <Link className="foto" to="/Application"></Link>
                                     <div>
                                         <p align="center">Год:&nbsp;2010</p>
                                     </div>
@@ -38,7 +38,7 @@ class Home extends Component {
                             <div>
                                 <div className="small" id="web">
                                     <div>
-                                        <p align="center">{Film_names[1]}</p>
+                                    <p align="center">{Film_names[1]}</p>
                                     </div>
                                     <Link className="foto1" to="/film" ></Link>
                                     <div>

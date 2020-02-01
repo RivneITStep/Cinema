@@ -4,18 +4,21 @@
     background-size:contain;
     width: 400px;
     height: 300px;
+    margin-left: 30px;
 }
 .form_image{
   background: url(../../image/max.jpeg) no-repeat;
   background-size:contain;
   width: 400px;
   height: 300px;
+  margin-left: 30px;
 }
 .form_image2{
   background: url(../../image/kod.jpg) no-repeat;
   background-size:contain;
   width: 400px;
   height: 300px;
+  margin-left: 30px;
 }
 .left{
     margin-left: 750px;
@@ -23,14 +26,15 @@
     height: 300px;
     margin-top: -400px;
 }
-.text{
-    margin-left: 350px;
-    color: white;
+.texttext{
+  color: white;
+  margin-left: 300px;
 }
 .text_g{
   font-size: 15px;
     color: white;
     margin: 5px;
+    margin-left: 30px;
 }
 .center{
     margin-left: 150px;

@@ -110,11 +110,11 @@ body {
   top:50%;
   left:50%;
   margin:-50px 0 0 -50px;
-  line-height:.9;
-  font-weight:bold;
-  width: 210px;
+   line-height:.9;
+  font-weight:bold; 
+   width: 210px;
   height: 350px;
-  margin: -115px 10px 10px 300px;
+   /* margin: -115px 10px 10px 300px;   */
   background-image: linear-gradient(180deg,rgba(31,29,29,.507),rgba(155,144,144,.507) 40%,rgba(27,25,25,.507));
   border: 2px;
   border-color: #fff;
@@ -129,11 +129,12 @@ body {
   overflow-x:hidden;
   transform: rotate(270deg) translateX(-100%);
   transform-origin: top left;
-    /* background-color:#999;   */
+     /* background-color:#999;    */
+  background: url(../../image/rectangle_6.png);
   position: absolute;
   width:100vh;
   height:100vw;
-  margin-left: -750px;
+  margin-left: -780px;
   margin-top: -50px;
   z-index: -1;
   font-family: Georgia, 'Times New Roman', Times, serif;
