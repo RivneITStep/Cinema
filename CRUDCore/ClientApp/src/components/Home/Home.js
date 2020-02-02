@@ -71,47 +71,6 @@ class Home extends Component {
                     </div>
                 </div>
             </div>
-            // <div className="main">
-
-            //     <div className="horizontal-scroll-wrapper squares">
-
-            //         <div class="small" id="web">
-            //             <div>
-            //                 <p>{Film_names[0]}</p>
-            //             </div>
-            //             <Link className="foto" to="/Application" ></Link>
-            //             <div>
-            //                 <p>Год:&nbsp;2010</p>
-            //             </div>
-            //         </div>
-
-            //         <div class="small" id="web">
-            //             <div>
-            //                 <p>{Film_names[1]}</p>
-            //             </div>
-            //             <Link className="foto1" to="/film" ></Link>
-            //             <div>
-            //                 <p>Год:&nbsp;2016</p>
-            //             </div>
-            //         </div>
-            //         <div class="small" id="web">
-            //             <div>
-            //                 <p>{Film_names[2]}</p>
-            //             </div>
-            //             <Link className="foto2" to="/film" ></Link>
-            //             <div>
-            //             </div>
-            //         </div>
-            //         <div>item 4</div>
-            //         <div>item 6</div>
-            //         <div>item 7</div>
-            //         <div>item 8</div>
-
-
-
-            //     <span onclick="window.scroll(0,0);">^^^^</span>
-            //     </div>
-            // </div>
         );
     }
 }

@@ -137,7 +137,7 @@ body {
   margin-left: -780px;
   margin-top: -50px;
   z-index: -1;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Bowlby One SC', Times, serif;
 
 }
 #container2 {
@@ -148,9 +148,8 @@ body {
 }
 
 .one {
- 
-  margin-top: 250px;
-
+  margin-top: 100px;
+  margin-left: 300px;
 }
 /* .two {
   

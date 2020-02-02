@@ -66,6 +66,7 @@
     cursor: pointer;
     z-index: 2;
     text-align: left;
+    font-family:'Bowlby One SC';
   }
   /* добавляем "гамбургер" */
   .menu__btn > span,
