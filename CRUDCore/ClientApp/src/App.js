@@ -28,9 +28,7 @@ class App extends Component {
       // <Layout>
       <Suspense fallback={<div>Загрузка...</div>}>
         <Switch>
-          <Helmet>
-            <style>{'body {background-image: linear-gradient(180deg,#1d3655, #000000 70%,#1d3655) ;background-attachment: fixed; no-repeat}'}</style>
-          </Helmet>
+          
           <Route path="/admin" name="Admin" render={props => <AdminLayout {...props} />} />
 
           <Route path="/" name="Default"

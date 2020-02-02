@@ -1,10 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { logout } from '../../auth/Login/actions';
+//import { logout } from '../../auth/Login/actions';
 
 import { Link } from 'react-router-dom';
-import '../../NavBar/NavMenu.css';
+import '../../NavBar/Nav.css';
 
 
 export class NavMenu extends React.Component {
@@ -21,7 +21,9 @@ export class NavMenu extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
-  render () {
+    render() {
+        //console.log(this.props);
+        const { isAuthenticated, user } = this.props;
     return (
       <header>
        <div className="hamburger-menu">
@@ -47,7 +49,7 @@ export class NavMenu extends React.Component {
                         <li className="nav-item">
                             {
                                 isAuthenticated ?
-                                    <Link className="menu__item" to="/" onClick={(e) => { e.preventDefault(); this.props.logout(); }}>LogOut</Link> :
+                                    <Link className="menu__item" to="/" onClick={(e) => { e.preventDefault();  }}>LogOut</Link> :
 
                                     <Link className="menu__item" to="/login">Login</Link>
                             }
@@ -61,8 +63,9 @@ export class NavMenu extends React.Component {
 
 const mapState=(state)=>{
   return {
-    isAuthenticated: state.auth.isAuthenticated
+      isAuthenticated: state.auth.isAuthenticated,
+      user: state.auth.user
   }
 }
 
-export default connect(mapState,{logout})(NavMenu)
+export default connect(mapState)(NavMenu)

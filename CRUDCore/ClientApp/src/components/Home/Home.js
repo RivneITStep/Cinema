@@ -15,7 +15,7 @@ class Home extends Component {
         history.push('/user/add');
     }
     render() {
-        //console.log($"{u.Id}.{u.UserName} - {u.Email}");
+        console.log("asdfasdf");
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
         return (
             <div className="main">
