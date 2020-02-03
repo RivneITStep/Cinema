@@ -1,14 +1,15 @@
 
 #base_menu{
 
-	height:100px;
+  height:100px;
+  width: 100%;
 	background-color:#252525;
 	display: flex;
 	 position: -webkit-sticky;
   position: sticky;
   top: 0;
   background: url(../../image/nav2.png)no-repeat ;
-  ;
+  background-size: 100%;
 }
 .ped{
   background: url(../../image/logo2.png) no-repeat;
@@ -17,12 +18,15 @@
   margin-top: -40px;
   margin-left: -115px;
 }
+
 .flip {
   background-color: transparent;
   width: 220px;
   height: 300px;
   margin-left: 300px;
   perspective: 1000px;
+  position: absolute;
+  left: 0px;
   }
   .flip-inner {
   position: relative;
@@ -196,7 +200,7 @@
 #search{
   width: 70px;
   height: 70px;
-  background-color: #335D6B;
+  background-color: rgb(27, 125, 158);
   color: #FFF;
   border: none;
   font-size: 0.9em;
@@ -218,7 +222,7 @@
 }
 .container:hover #search{
   width: 400px;
-  background-color:#3299BB;
+  background-color:rgb(55, 178, 219);
   border-radius: 0%;
 }
 .container:hover .lupa{
@@ -265,7 +269,7 @@ a:hover {
   right: 430px;
 }
 .label:hover{
-  background: rgb(82, 79, 79);
+  background: rgb(65, 117, 151);
   cursor: pointer;
 }
 

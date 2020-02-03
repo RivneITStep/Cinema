@@ -130,6 +130,7 @@ body {
   transform-origin: top left;
      /* background-color:#999;    */
   background: url(../../image/rectangle_6.png);
+  background-size: 100%;
   position: absolute;
   width:100vh;
   height:100vw;
