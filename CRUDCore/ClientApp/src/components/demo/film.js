@@ -138,7 +138,7 @@ class Application extends Component {
                                     <form>
                                         <p className="filmtext" >Макс Стіл</p>
                                         <div className="form_image" >
-                                            <p className="text" >
+                                            <p className="texttext" >
                                                 Название:&nbsp;Max&nbsp;Steel
                                                 <br/><br/>
                                                 Год&nbsp;выхода:&nbsp;2016
