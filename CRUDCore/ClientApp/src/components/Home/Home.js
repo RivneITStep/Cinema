@@ -15,14 +15,13 @@ class Home extends Component {
         history.push('/user/add');
     }
     render() {
-        console.log("asdfasdf");
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
         return (
             <div className="main">
                   
                 <div className="horizontal-scroll-wrapper squares">
                 
-                    <div class="small" id="web">
+                    <div className="small" id="web">
                         <div>
                             <p>{Film_names[0]}</p>
                         </div>
@@ -32,7 +31,7 @@ class Home extends Component {
                         </div>
                     </div>
                    
-                    <div class="small" id="web">
+                    <div className="small" id="web">
                         <div>
                             <p>{Film_names[1]}</p>
                         </div>
@@ -41,7 +40,7 @@ class Home extends Component {
                             <p>Год:&nbsp;2016</p>
                         </div>
                     </div>
-                    <div class="small" id="web">
+                    <div className="small" id="web">
                         <div>
                             <p>{Film_names[2]}</p>
                         </div>
