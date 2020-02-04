@@ -1,6 +1,5 @@
 import React, { Suspense, Component } from "react";
 import { Switch, Route } from "react-router-dom";
-import { Helmet } from 'react-helmet';
 
 // import { Admin, Resource, ListGuesser } from "react-admin";
 // import jsonServerProvider from "ra-data-json-server";

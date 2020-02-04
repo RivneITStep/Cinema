@@ -8,7 +8,7 @@
 	 position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background: url(../../image/nav2.png)no-repeat ;
+  background: url(../../image/nav2.png);
   background-size: 100%;
 }
 .ped{
@@ -17,6 +17,7 @@
   width: 450px;
   margin-top: -40px;
   margin-left: -115px;
+ 
 }
 
 .flip {
@@ -25,8 +26,6 @@
   height: 300px;
   margin-left: 300px;
   perspective: 1000px;
-  position: absolute;
-  left: 0px;
   }
   .flip-inner {
   position: relative;
@@ -40,10 +39,10 @@
   transform: rotateY(180deg);
   }
   .flip-front, .flip-back {
-  position: absolute;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
+  position: absolute;
   }
   /* .flip-front {
   background-color: #cccccc;
@@ -277,10 +276,12 @@ dialog{
   z-index: 3;
   border-radius: 20px;
   border-color: #00000000;
-  margin-left: 64%;
   position: absolute;
-  right: 400px;
+  right: 0px;
   background-color: #2e36a1;
+  margin-left: 63%;
+  text-align: center;
+  padding: .5em 1em;
 }
 dialog li{
   list-style-type: none; 
@@ -290,69 +291,106 @@ dialog li:hover{
   background-color: #4d529c;
   cursor: pointer;
 }
+.close{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
 .close:hover{
-  background-color: #000000;
   cursor: pointer;
 }
-dialog{
-  animation-name: dialog;
-  -webkit-animation-name: dialog;   
 
-  animation-duration: 3s; 
-  -webkit-animation-duration: 3s;
+@media (max-width: 1100px)
+ {
+    .flip{
+      margin-left: 100px;
+    }
+ }
+ @media (max-width: 900px)
+ {
+    .flip{
+      display: none;
+    }
+ }
+ @media (max-width: 630px)
+ {
+    #search{
+      margin-left: 200px;
+    }
+    .container .lupa{
+      margin-left: 225px;
+    }
+    .container:hover #search{
+      width: 200px;
+    }
+    .search-button{
+      margin-left: 200px;
+    }
+    .label{
+      right: 230px;
+      margin-left: 200px;
+      z-index: 1;
+    }
+ }
 
-  animation-timing-function: ease-out;    
-  -webkit-animation-timing-function: ease-out;    
-
-  transform-origin: 50% 0%;
-  -ms-transform-origin: 50% 0%;
-  -webkit-transform-origin: 50% 0%;       
+ .meu__modal__bg{
+  background:rgba(0,0,0,0.4);
+  position:fixed;
+  z-index:1;
+  top:0;
+  left:0;
+  transition: all .6s ease;
+  cursor:pointer;
+  opacity:0;
 }
-
-@keyframes dialog {
-  0% {
-      transform: scaleY(0.1);
-  }
-  40% {
-      transform: scaleY(1.02);
-  }
-  60% {
-      transform: scaleY(0.98);
-  }
-  80% {
-      transform: scaleY(1.01);
-  }
-  100% {
-      transform: scaleY(0.98);
-  }               
-  80% {
-      transform: scaleY(1.01);
-  }
-  100% {
-      transform: scaleY(1);
-  }                           
+.meu__modal{
+  height:400px;
+  width:400px;
+  position:fixed;
+  left:50%;
+  transform:translate(-50%, -50%);
+  z-index:2;
+  background:#fff;
+   transition: all .6s ease;
+  opacity:0;
+  top:50%;
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12), 0 11px 15px -7px rgba(0,0,0,.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
-
-@-webkit-keyframes dialog {
-  0% {
-      -webkit-transform: scaleY(0.1);
-  }
-  40% {
-      -webkit-transform: scaleY(1.02);
-  }
-  60% {
-      -webkit-transform: scaleY(0.98);
-  }
-  80% {
-      -webkit-transform: scaleY(1.01);
-  }
-  100% {
-      -webkit-transform: scaleY(0.98);
-  }               
-  80% {
-      -webkit-transform: scaleY(1.01);
-  }
-  100% {
-      -webkit-transform: scaleY(1);
-  }       
+.meu__modal p{
+  font-size:24px;
 }
+.btn__confirm{
+  height:42px;
+  width:160px;
+  background:#e74c3c;
+  color:#fff;
+  display:flex;
+  margin:auto;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12), 0 11px 15px -7px rgba(0,0,0,.2);
+  cursor:pointer;
+}
+.btn__confirm:hover{
+  background:#e66354;
+}
+.mychk{
+  display:none;
+}
+.mychk:checked ~ .meu__modal{
+  opacity:1;
+}
+.mychk:checked ~ .meu__modal__bg{
+  opacity:1;
+}
+ul {
+  margin: 0; /* Обнуляем значение отступов */
+  padding: 4px; /* Значение полей */
+ }
+ ul li {
+  display: block; /* Отображать как строчный элемент */
+  margin-right: 5px; /* Отступ слева */
+  border: 1px solid #000; /* Рамка вокруг текста */
+  padding: 3px; /* Поля вокруг текста */
+ }

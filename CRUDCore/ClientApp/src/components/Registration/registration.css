@@ -2,9 +2,12 @@
 {
     padding: 5%;
     margin-bottom: 2%;
+    margin-left: -400px;
+    right:100px;
     background: url(../../image/container-bg.png) no-repeat;
     background-size:contain;
     height: 700px;
+    width: 900px;
     z-index: 0;
 }
 
@@ -21,30 +24,61 @@
     margin-left:77%;
 
 }
-#row{
-    margin-top : 68px;
+.btnSubmit:hover{
+    background: -webkit-linear-gradient(right, #0b305c, #111111);
+}
+#row1{
+    margin-top : 110px;
     margin-left: 77%;
     width: 200px;
 }
-.notice-success {
+#row{
+    margin-top : 10px;
+    margin-left: 77%;
+    width: 200px;
+}
+/* .notice-success {
     background: #67b11c url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/tick_2.png") 20px 50% no-repeat;
     border: 2px solid #467813;
     border-radius: 5px;
     color: #fff;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     padding: 15px 20px 15px 50px;
-  }
-  @media (max-width: 990px)
+  } */
+  @media (max-width: 680px)
 {
-    .form-control{
-        width: 100px;
+    #form-content{
+        height: 100px;
+        width: 300px;
+        margin-left: -100px;
     }
     #row{
-        width: 100px;
-        margin-top: 0px;
+        width: 200px;
+        margin-left: 67%;
     }
     #row1{
-        margin-left: 77%;
-        margin-top: 53px;
+        margin-top : 110px;
+        margin-left: 67%;
+        width: 200px;
+    }
+}
+@media (max-width: 1200px)
+{
+    #form-content{
+        height: 500px;
+        width: 700px;
+        margin-left: -200px;
+    }
+    #row{
+        width: 200px;
+        margin-left: 67%;
+    }
+    #row1{
+        margin-top : 110px;
+        margin-left: 67%;
+        width: 200px;
+    }
+    .btnSubmit{
+        margin-top:0px;
     }
 }
