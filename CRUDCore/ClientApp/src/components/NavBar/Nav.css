@@ -209,7 +209,11 @@
           transition: 0.6s ease-out;
   border-radius: 50%;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  
+  display:flex;
+  margin:auto;
+  align-items:center;
+  justify-content:center;
+  box-shadow: 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12), 0 11px 15px -7px rgba(0,0,0,.2);
 }
 
 #search:focus, 
@@ -242,60 +246,6 @@ a {
 
 a:hover {
   color: #222222
-}
-
-/*Modal*/
-#toggle{
-  visibility: hidden;
-  opacity: 0;
-  position: relative;
-  z-index: -1;
-}
-
-#toggle:checked ~ dialog {
-  display: block;
-}
-
-.label{
-  background: rgba(0, 0, 0, 0);
-  color: white;
-  padding: .5em 1em;
-  border-radius: 4px;
-  margin-left: 50%;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  text-align: center;
-  position: absolute;
-  right: 430px;
-}
-.label:hover{
-  background: rgb(65, 117, 151);
-  cursor: pointer;
-}
-
-dialog{
-  z-index: 3;
-  border-radius: 20px;
-  border-color: #00000000;
-  position: absolute;
-  right: 0px;
-  background-color: #2e36a1;
-  margin-left: 63%;
-  text-align: center;
-  padding: .5em 1em;
-}
-dialog li{
-  list-style-type: none; 
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-dialog li:hover{
-  background-color: #4d529c;
-  cursor: pointer;
-}
-.close{
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.close:hover{
-  cursor: pointer;
 }
 
 @media (max-width: 1100px)
@@ -342,8 +292,8 @@ dialog li:hover{
   opacity:0;
 }
 .meu__modal{
-  height:400px;
-  width:400px;
+  height:600px;
+  width:1000px;
   position:fixed;
   left:50%;
   transform:translate(-50%, -50%);
@@ -354,8 +304,8 @@ dialog li:hover{
   top:50%;
   box-shadow: 0 24px 38px 3px rgba(0,0,0,.14), 0 9px 46px 8px rgba(0,0,0,.12), 0 11px 15px -7px rgba(0,0,0,.2);
   display:flex;
-  align-items:center;
-  justify-content:center;
+  /* align-items:center;
+  justify-content:center; */
 }
 .meu__modal p{
   font-size:24px;
@@ -384,13 +334,22 @@ dialog li:hover{
 .mychk:checked ~ .meu__modal__bg{
   opacity:1;
 }
-ul {
-  margin: 0; /* Обнуляем значение отступов */
-  padding: 4px; /* Значение полей */
- }
- ul li {
-  display: block; /* Отображать как строчный элемент */
-  margin-right: 5px; /* Отступ слева */
-  border: 1px solid #000; /* Рамка вокруг текста */
-  padding: 3px; /* Поля вокруг текста */
- }
+.menu_modal_rightcol{
+  text-align: center;
+  width: 400px;
+  
+}
+.menu_modal_leftcol{
+  text-align: left;
+  width: 400px;
+}
+.menu_modal_centcol{
+  text-align: center;
+  width: 400px;
+}
+li{
+  list-style-type: none;
+}
+li:hover{
+  cursor: pointer;
+}
