@@ -1,5 +1,5 @@
 import React, { Component, Suspense } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import Layout from './Layout';
 // routes config
 import adminRoutes from '../../../routes/adminRoutes';
@@ -24,6 +24,7 @@ class AdminLayout extends Component {
                   )} />
               );
             })}
+            <Redirect from="/" to="/admin/home" />
           </Switch>
         </Suspense>
       </Layout>

@@ -1,76 +1,34 @@
 import React from 'react';
-import { connect } from 'react-redux';
-
-import { logout } from '../../../action/authAction';
-
-import { Link } from 'react-router-dom';
-import '../../NavBar/Nav.css';
-
+import './Admin.css';
 
 export class NavMenu extends React.Component {
   constructor(props) {
     super(props);
-
-    this.toggle = this.toggle.bind(this);
-    this.state = {
-      isOpen: false
-    };
+   
   }
-  toggle() {
-    this.setState({
-      isOpen: !this.state.isOpen
-    });
-  }
+  
+ 
   render() {
-    const { isAuthenticated, user } = this.props;
     return (
-      <header>
-        <div className="hamburger-menu">
-          <input id="menu__toggle" type="checkbox" />
-          <label className="menu__btn" htmlFor="menu__toggle">
-            <span></span>
-          </label>
-          <ul className="menu__box">
-            <li className="nav-item">
-              <img src="../../../public/favico_1.ico" alt="asd" />
-            </li>
-            <li className="nav-item">
-              <Link className="menu__item" to="/admin/home">CiNeMa</Link>
-            </li>
-            <li className="nav-item">
-              {
-                isAuthenticated ?
-                  <Link className="menu__item" to="/admin/profile">{user.name}</Link> :
-
-                  <Link className="menu__item" to="/admin/register">Register</Link>
-              }
-            </li>
-            <li className="nav-item">
-              {
-                isAuthenticated ?
-                  <Link className="menu__item" to="/" onClick={(e) => { e.preventDefault(); this.props.logout(); }}>LogOut</Link> :
-
-                  <Link className="menu__item" to="/admin/login">Login</Link>
-              }
-            </li>
-            <li className="nav-item">
-              <Link className="menu__item" to="/admin/add_film">Add film</Link>
-            </li>
-            <li className="nav-item">
-              <Link className="menu__item" to="/admin/test">Test</Link>
-            </li>
+      <div className="admin-panel clearfix">
+        <div className="slidebar">
+          <div className="logo">
+            <a href=""></a>
+          </div>
+          <ul>
+            <li><a href="#posts">Users</a></li>
+            <li><a href="#media">Add Films</a></li>
+            <li><a href="#pages">Bun</a></li>
+            <li><a href="#links">Statistic</a></li>
           </ul>
         </div>
-      </header>
+        <div className="Main">
+
+        </div>
+      </div>
     );
   }
 }
 
-const mapState = (state) => {
-  return {
-    isAuthenticated: state.auth.isAuthenticated,
-    user: state.auth.user
-  }
-}
 
-export default connect(mapState, logout)(NavMenu)
+export default(NavMenu);

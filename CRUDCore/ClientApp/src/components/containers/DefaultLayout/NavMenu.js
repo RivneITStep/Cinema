@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { logout } from '../../../action/authAction';
 
 import { Link } from 'react-router-dom';
-import '../../NavBar/Nav.css';
+import './Default.css';
 
 
 export class NavMenu extends React.Component {
@@ -80,13 +80,13 @@ export class NavMenu extends React.Component {
               </tbody>
               <tfoot>
                 <tr>
-                   <td className="menu_modal_leftcol">
+                   <td className="menu_modal_successe">
                    <button>Successe</button>
                    </td>
                 </tr>
                 <tr>
-                  <td className="menu_modal_rightcol">
-                  <button>Successe</button>
+                  <td className="menu_modal_close">
+                  <button>Close</button>
                 </td>
               </tr>
               </tfoot> 
