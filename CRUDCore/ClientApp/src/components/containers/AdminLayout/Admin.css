@@ -187,7 +187,7 @@
       border-radius: 50%;
       box-shadow: 0px 1px 3px rgba(0,0,0,0.8);
       margin: 20px;
-      margin-top:150px;
+      margin-top:65px;
       margin-left: 150px;
 
   }
@@ -218,30 +218,29 @@
     .stats {
       float: left;
       margin-left: 0;
-      margin-top:150px;
+      margin-top:10px;
   }
-  #safari{
-    z-index: 10;
-    background-color: #AAA;
-    transform: rotate(-20deg);
+#something{
+  z-index: 10;
+  background-color: #DA9421;
+  transform: rotate(-55deg);
 }
-
 #ie {
-    z-index: 20;
+    z-index: 9;
     background-color: #0074D9;
-    transform: rotate(160deg);
+    transform: rotate(145deg);
 }
 
-#firefox {
-    z-index: 30;
-    background-color: #FF851B;
-    transform: rotate(20deg);
-}
-
-#chrome {
+#notregist {
     z-index: 40;
-    background-color: #2ECC40;
-    transform: rotate(100deg);
+    background-color: #D54F2A;
+    transform: rotate(50deg);
+}
+
+#regist {
+    z-index: 50;
+    background-color: #89B800;
+    transform: rotate(0deg);
 }
   li {
      list-style: none;
@@ -258,15 +257,15 @@
       height: 15px;
       left: -25px;
       top: 2px;
-      background-color: #AAA;
+      background-color: #DA9421;
   }
   
   [data-name="Chrome"]::before{
-      background-color: #2ECC40;
+      background-color: #89B800;
   }
   
   li[data-name="Firefox"]::before {
-      background-color: #FF851B;
+      background-color: #D54F2A;
   }
   
   li[data-name="Internet Explorer"]::before  {
@@ -277,6 +276,7 @@
 
 .wrap {
   margin: 3em auto;
+  margin-top: -40px;
   padding: 3em 0 0;
   width: 600px;
   position: relative;
@@ -288,14 +288,14 @@
   cursor: pointer;
 }
 .barra.barra1 {
-  background: #89B800;
-  box-shadow: 1px -1px #79a300, 2px -2px #79a300, 3px -3px #79a300, 4px -4px #79a300, 5px -5px #79a300, 6px -6px #79a300, 7px -7px #79a300, 8px -8px #79a300, 9px -9px #79a300, 10px -10px #79a300;
-  height: 50px;
+  background: #D54F2A;
+  box-shadow: 1px -1px #bd4625, 2px -2px #bd4625, 3px -3px #bd4625, 4px -4px #bd4625, 5px -5px #bd4625, 6px -6px #bd4625, 7px -7px #bd4625, 8px -8px #bd4625, 9px -9px #bd4625, 10px -10px #bd4625;
+  height: 70px;
   width: 30px;
 }
 .barra.barra2 {
-  background: #D54F2A;
-  box-shadow: 1px -1px #bd4625, 2px -2px #bd4625, 3px -3px #bd4625, 4px -4px #bd4625, 5px -5px #bd4625, 6px -6px #bd4625, 7px -7px #bd4625, 8px -8px #bd4625, 9px -9px #bd4625, 10px -10px #bd4625;
+  background: #89B800;
+  box-shadow: 1px -1px #79a300, 2px -2px #79a300, 3px -3px #79a300, 4px -4px #79a300, 5px -5px #79a300, 6px -6px #79a300, 7px -7px #79a300, 8px -8px #79a300, 9px -9px #79a300, 10px -10px #79a300;
   height: 200px;
   width: 30px;
 }
@@ -306,15 +306,9 @@
   width: 30px;
 }
 .barra.barra4 {
-  background: #2F1B08;
-  box-shadow: 1px -1px #291807, 2px -2px #291807, 3px -3px #291807, 4px -4px #291807, 5px -5px #291807, 6px -6px #291807, 7px -7px #291807, 8px -8px #291807, 9px -9px #291807, 10px -10px #291807;
+  background: #0074D9;
+  box-shadow: 1px -1px rgb(0, 92, 172), 2px -2px rgb(0, 92, 172), 3px -3px rgb(0, 92, 172), 4px -4px rgb(0, 92, 172), 5px -5px rgb(0, 92, 172), 6px -6px rgb(0, 92, 172), 7px -7px rgb(0, 92, 172), 8px -8px rgb(0, 92, 172), 9px -9px rgb(0, 92, 172), 10px -10px rgb(0, 92, 172);
   height: 100px;
-  width: 30px;
-}
-.barra.barra5 {
-  background: #EEF4B2;
-  box-shadow: 1px -1px #d3d89e, 2px -2px #d3d89e, 3px -3px #d3d89e, 4px -4px #d3d89e, 5px -5px #d3d89e, 6px -6px #d3d89e, 7px -7px #d3d89e, 8px -8px #d3d89e, 9px -9px #d3d89e, 10px -10px #d3d89e;
-  height: 25px;
   width: 30px;
 }
 .pointer {
