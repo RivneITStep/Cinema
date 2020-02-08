@@ -78,6 +78,12 @@ a:hover, a.active {
   color: white;
   border-radius: 10px;
 } 
+
+body {
+  margin:0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  
+}
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
@@ -87,11 +93,6 @@ a:hover, a.active {
   width: 0px;
   height: 0px;
   }
-body {
-  margin:0;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-  
-}
 #container .box {
   width:300px;
   height:500px;
@@ -113,7 +114,6 @@ body {
   font-weight:bold; 
    width: 210px;
   height: 350px;
-   /* margin: -115px 10px 10px 300px;   */
   background-image: linear-gradient(180deg,rgba(31,29,29,.507),rgba(155,144,144,.507) 40%,rgba(27,25,25,.507));
   border: 2px;
   border-color: #fff;
@@ -128,15 +128,15 @@ body {
   overflow-x:hidden;
   transform: rotate(270deg) translateX(-100%);
   transform-origin: top left;
-     /* background-color:#999;    */
-  background: url(../../image/rectangle_6.png) no-repeat ;
+   /* background-color:#999;     */
+   background: url(../../image/rectangle_6.png) no-repeat ;
   background-size: cover;
   position: absolute;
   align-content: center;
-  width:100vh;
-  height:1000vw;
+  width:90vh;
+  height:100vw;
   margin-left: -780px;
-  margin-top: -80px;
+  margin-top: -85px;
   z-index: -1;
   font-family: Georgia, 'Bowlby One SC', Times, serif;
 

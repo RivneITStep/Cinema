@@ -17,9 +17,11 @@
     width: 450px;
     margin-top: -40px;
     margin-left: -115px;
-   
+    
   }
-  
+  .fon{
+    background: url(../../../image/rectangle_6.png) no-repeat ;
+  }
   .flip {
     background-color: transparent;
     width: 220px;
