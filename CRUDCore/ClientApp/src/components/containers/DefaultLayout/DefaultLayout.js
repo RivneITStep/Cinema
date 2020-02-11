@@ -10,7 +10,7 @@ class DefaultLayout extends Component {
     return (
         <Layout>
             <Helmet>
-                <style>{'body {background-image: linear-gradient(180deg,#1d3655, #000000 70%,#1d3655) ;background-attachment: fixed; no-repeat}'}</style>
+                <style>{'body {background-image: linear-gradient(254.3deg, #2B547E 6.47%, #358CBE 79.5%) ;background-attachment: fixed; no-repeat}'}</style>
             </Helmet>
         <h1>Hello default Layout</h1>
         <Suspense fallback={<div>Загрузка...</div>}>

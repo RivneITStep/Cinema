@@ -19,7 +19,7 @@ export class NavMenu extends React.Component {
           </div>
           <ul>
             <li><a href="#posts">Users</a></li>
-            <li><a href="#media">Add Films</a></li>
+            <li><a href="../../create/create.js">Add Films</a></li>
             <li><a href="#pages">Bun</a></li>
             <li><a href="#links">Statistic</a></li>
           </ul>

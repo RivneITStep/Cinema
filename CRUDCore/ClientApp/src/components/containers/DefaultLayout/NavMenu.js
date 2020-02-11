@@ -112,6 +112,12 @@ export class NavMenu extends React.Component {
             <Link className="menu__item" to="/home">CiNeMa</Link>
           </li>
           <li className="nav-item">
+            <Link className="menu__item" to="/test">film create</Link>
+          </li>
+          <li className="nav-item">
+            <Link className="menu__item" to="/admin/home">admin</Link>
+          </li>
+          <li className="nav-item">
             {
               isAuthenticated ?
                 <Link className="menu__item" to="/profile">{user.name}</Link> :

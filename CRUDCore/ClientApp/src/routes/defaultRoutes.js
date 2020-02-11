@@ -7,7 +7,7 @@ const Profile = React.lazy(() => import("../components/UserProfile/userprofile")
 const Application = React.lazy(() => import("../components/demo/Application"));
 const film = React.lazy(() => import("../components/demo/film"));
 const film2 = React.lazy(() => import("../components/demo/film2"));
-
+const test = React.lazy(() => import("../components/Test/test"));
 
 const defaultRoutes = [
     { path: '/home', exact: true, name: 'Головна', component: Home  },
@@ -17,5 +17,7 @@ const defaultRoutes = [
     { path: '/Application', exact: true, name: 'фільм', component: Application  },
     { path: '/film', exact: true, name: 'фільм', component: film  },
     { path: '/film2', exact: true, name: 'фільм', component: film2  },
+    { path: '/test', exact: true, name: 'test', component: test  },
+  
 ];
 export default defaultRoutes;
