@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React  from 'react';
 import './Admin.css';
-class SignUpForm extends Component {
+class Add_film extends React.Component {
 
 
   logconsole() {
@@ -56,4 +55,4 @@ class SignUpForm extends Component {
     )
   }
 }
-export default (SignUpForm);
+export default (Add_film);

@@ -3,17 +3,37 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Layout from './Layout';
 import defaultRoutes from '../../../routes/defaultRoutes'
 import { Helmet } from 'react-helmet';
-
+import $ from "jquery";
 class DefaultLayout extends Component {
 
   render() {
+    setTimeout(function() {
+      $('.inner div').addClass('done'); 
+      
+      setTimeout(function() {
+        $('.inner div').addClass('page'); 
+        
+        setTimeout(function() {
+          $('.pageLoad').addClass('off'); 
+          
+          $('body, html').addClass('on'); 
+          
+          
+        }, 500)
+      }, 500)
+    }, 1500)
     return (
         <Layout>
             <Helmet>
                 <style>{'body {background-image: linear-gradient(180deg,#1d3655, #000000 70%,#1d3655) ;background-attachment: fixed; no-repeat}'}</style>
             </Helmet>
-        <h1>Hello default Layout</h1>
-        <Suspense fallback={<div>Загрузка...</div>}>
+        <Suspense fallback={<div className="pageLoad">
+      <div className="inner">
+        <div></div>
+        <div></div> 
+        <div></div>
+        <div></div>
+      </div> </div>}>
           <Switch>
             {defaultRoutes.map((route, idx) => {
               return route.component ? (
@@ -27,7 +47,7 @@ class DefaultLayout extends Component {
                   )} />
               ) : (null);
             })}
-            <Redirect from="/" to="/home" />
+            <Redirect from="/" to="/admin" />
           </Switch>
         </Suspense>
 
