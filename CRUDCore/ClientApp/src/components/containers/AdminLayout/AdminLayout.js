@@ -47,7 +47,7 @@ class AdminLayout extends Component {
                   )} />
               );
             })}
-            <Redirect from="/" to="/home" />
+            <Redirect from="/" to="/admin" />
           </Switch>
         </Suspense>
       </Layout>

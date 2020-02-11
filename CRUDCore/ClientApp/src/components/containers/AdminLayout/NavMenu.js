@@ -18,7 +18,7 @@ export class NavMenu extends React.Component {
 					</div>
 					<ul>
 						<li><Link to="/admin">Users</Link></li>
-						<li><Link to="/admin/add_film">Add Films</Link></li>
+						<li><Link to="/admin/create">Add Films</Link></li>
 						<li><Link to="/admin/statistic">Statistic</Link></li>
 					</ul>
 				</div>
