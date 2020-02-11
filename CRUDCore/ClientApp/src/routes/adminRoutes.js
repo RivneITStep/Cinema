@@ -1,15 +1,14 @@
 import React from 'react';
 
-const Home = React.lazy(() => import("../components/Home/Home"));
-const Login = React.lazy(() => import("../components/Login/LoginPage"));
-const Register = React.lazy(() => import("../components/Registration/RegistrationPage"));
-const Profile = React.lazy(() => import("../components/UserProfile/userprofile"));
+const Test = React.lazy(() => import("../components/Test/test"));
+const AddFilms = React.lazy(() => import("../components/Add_Films/Add_film"));
+const Statistic = React.lazy(() => import("../components/Statistic/statistic"));
+const Users = React.lazy(() => import("../components/Users/users"));
 
 const adminRoutes = [
-    { path: '/admin/home', exact: true, name: 'Головна', component: Home  },
-    { path: '/admin/login', exact: true, name: 'Вхід', component: Login  },
-    { path: '/admin/register', exact: true, name: 'Галерея', component: Register  },
-    { path: '/admin/profile', exact: true, name: 'Профіль', component: Profile  },
-   
+    { path: '/admin/test', exact: true, name: 'Test', component: Test  },
+    { path: '/admin/add_film', exact: true, name: 'Галерея', component: AddFilms  },
+    { path: '/admin/statistic', exact: true, name: 'Галерея', component: Statistic  },
+    { path: '/admin', exact: true, name: 'Галерея', component: Users  },
 ];
 export default adminRoutes;
