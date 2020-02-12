@@ -33,6 +33,7 @@ class Home extends Component {
                             </div>
                         </div>
                     </div>
+                    
                     <div className="box two">
                         <div>
                             <div className="small" id="web">

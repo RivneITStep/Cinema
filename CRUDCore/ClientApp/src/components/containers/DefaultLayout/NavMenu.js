@@ -111,12 +111,12 @@ export class NavMenu extends React.Component {
           <li className="nav-item">
             <Link className="menu__item" to="/home">CiNeMa</Link>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <Link className="menu__item" to="/test">film create</Link>
           </li>
           <li className="nav-item">
             <Link className="menu__item" to="/admin/home">admin</Link>
-          </li>
+          </li> */}
           <li className="nav-item">
             {
               isAuthenticated ?
