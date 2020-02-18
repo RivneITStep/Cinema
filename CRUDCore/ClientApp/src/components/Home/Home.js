@@ -6,8 +6,6 @@ class Home extends Component {
     state = {
         isShowModal: false,
     }
-    componentDidMount() {
-    }
     redirectToAddUser = (e) => {
         const { history } = this.props;
         e.preventDefault();
@@ -20,7 +18,7 @@ class Home extends Component {
             <div className="main">
                 <div id="container">
                     <div id="container2">
-                        <div className="box one">
+                        <div className="box">
                             <div>
                                 <div className="small" id="web">
                                     <div>
@@ -33,7 +31,7 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="box two">
+                        <div className="box">
                             <div>
                                 <div className="small" id="web">
                                     <div>
@@ -46,7 +44,7 @@ class Home extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="box three">
+                        <div className="box">
                             <div>
                             <div>
                                 <div className="small" id="web">
@@ -60,13 +58,13 @@ class Home extends Component {
                             </div>
                             </div>
                         </div>
-                        <div className="box four"><div>тест</div></div>
-                        <div className="box two"><div>1</div></div>
-                        <div className="box three"><div>2</div></div>
-                        <div className="box four"><div>3</div></div>
-                        <div className="box two"><div>4</div></div>
-                        <div className="box three"><div>5</div></div>
-                        <div className="box four"><div>6</div></div>
+                        <div className="box"><div>тест</div></div>
+                        <div className="box"><div>1</div></div>
+                        <div className="box"><div>2</div></div>
+                        <div className="box"><div>3</div></div>
+                        <div className="box"><div>4</div></div>
+                        <div className="box"><div>5</div></div>
+                        <div className="box"><div>6</div></div>
                     </div>
                 </div>
             </div>

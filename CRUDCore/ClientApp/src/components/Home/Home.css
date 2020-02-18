@@ -99,9 +99,7 @@ body {
   position:relative;
   
 }
-#container .box > div {
-  width:100px;
-  height:100px;
+#container .box > div{
   font-size:35px;
   color:#FFF;
   padding-top: -100px;
@@ -109,11 +107,10 @@ body {
   top:50%;
   left:50%;
   margin:-50px 0 0 -50px;
-   line-height:.9;
+  line-height:.9;
   font-weight:bold; 
-   width: 210px;
-  height: 350px;
-   /* margin: -115px 10px 10px 300px;   */
+  width: 210px;
+  height: 370px;
   background-image: linear-gradient(180deg,rgba(31,29,29,.507),rgba(155,144,144,.507) 40%,rgba(27,25,25,.507));
   border: 2px;
   border-color: #fff;
@@ -121,14 +118,15 @@ body {
   top: 200px;
   left: -4px;
   box-shadow: 20px 20px 5px 0 rgba(0,0,0,.2);
+  text-align: center;
 }
 
 #container {
+  
   overflow-y:scroll;
   overflow-x:hidden;
   transform: rotate(270deg) translateX(-100%);
   transform-origin: top left;
-     /* background-color:#999;    */
   background: url(../../image/rectangle_6.png) no-repeat ;
   background-size: cover;
   position: absolute;
@@ -142,25 +140,25 @@ body {
 
 }
 #container2 {
+  margin-top: 200px;
+  margin-left: -100px;
   transform: rotate(90deg) translateY(-100vh);
   transform-origin: top left;
   white-space:nowrap;
   font-size:0;
 }
-
-.one {
-  margin-top: 100px;
-  margin-left: 300px;
+@media (max-width: 1670px)
+{
+  #container .box > div{
+    margin-left: 100px;
+  }
 }
-/* .two {
-  
+@media (max-width: 1400px)
+{
+  #container .box > div{
+    margin-left: 400px;
+  }
 }
-.three {
- 
-}
-.four {
- 
-} */
 @media (max-width: 979px)
 {
   #container .box > div{
