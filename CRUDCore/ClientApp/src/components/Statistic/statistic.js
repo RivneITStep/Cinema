@@ -6,7 +6,7 @@ export class statistic extends React.Component {
     render() {
 
         return (
-            <div className="main">
+            <div>
                 <h2>Статистика користувачів сайту</h2>
                 <div className="pie-container">
                     {/* <div id="notregist" className="pie"></div> */}

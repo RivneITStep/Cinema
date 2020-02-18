@@ -38,11 +38,11 @@ export class NavMenu extends React.Component {
             </div>
           </div>
           {/* ////// */}
-          <label htmlFor="myChk" className="btn__confirm">Genres</label>
+          {/* <label htmlFor="myChk" className="btn__confirm">Genres</label>
           <input type="checkbox" id="myChk" className="mychk" />
           <label className="meu__modal__bg" htmlFor="myChk"></label>
           <div className="meu__modal">
-            <table cellSpacing="0">
+            <table  cellSpacing="0">
               <tbody>
                 <tr>
                   <td className="menu_modal_leftcol">
@@ -91,7 +91,7 @@ export class NavMenu extends React.Component {
               </tr>
               </tfoot> 
             </table>
-        </div>
+        </div> */}
         {/* ////// */}
         <div className="search-button">
           <div className="container">

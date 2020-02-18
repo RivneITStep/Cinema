@@ -164,43 +164,62 @@ body {
 @media (max-width: 979px)
 {
   #container .box > div{
-zoom: 110%;
-margin-left: 300px;
-}
-.menu__btn{
-zoom: 110%;
-}
+    zoom: 110%;
+    margin-left: 400px;
+  }
+  .menu__btn{
+    zoom: 110%;
+  }
 }
 @media (max-width: 767px)
 {
   #container .box > div{
-zoom: 120%;
-margin-left: 300px;
-}
-.menu__btn{
-zoom: 120%;
-}
+    zoom: 120%;
+    margin-left: 300px;
+  }
+  .menu__btn{
+    zoom: 120%;
+  }
 }
 @media (max-width: 620px)
 {
   #container .box > div{
-zoom: 130%;
-margin-left: 300px;
-}
-.menu__btn{
-zoom: 130%;
-}
+    zoom: 130%;
+    margin-left: 500px;
+  }
+  .menu__btn{
+    zoom: 130%;
+  }
 }
 @media (max-width:500px)
 {
   #container .box > div{
-zoom: 140%;
-margin-left: 300px;
-margin-top:-130px ;
+    zoom: 140%;
+    margin-left: 300px;
+    margin-top:-130px ;
+  }
+  .menu__btn{
+    zoom: 140%;
+  }
 }
-.menu__btn{
-zoom: 140%;
+
+@media (max-width: 1460px)
+{
+  #container .box > div{
+    margin-left: 100px;
+  }
 }
+@media (max-width: 1200px)
+{
+  #container .box > div{
+    margin-left: 200px;
+  }
+}
+@media (max-width: 900px)
+{
+  #container .box > div{
+    margin-left: 300px;
+  }
 }
 /* 
  Translating the content's X ruines the scrollbar length. 
