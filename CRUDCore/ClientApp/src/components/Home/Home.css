@@ -221,6 +221,13 @@ body {
     margin-left: 300px;
   }
 }
+
+@media (max-height: 666px)
+{
+  #container .box > div{
+    margin-top: -200px;
+  }
+}
 /* 
  Translating the content's X ruines the scrollbar length. 
 

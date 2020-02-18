@@ -7,7 +7,7 @@
        position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background: url(../../../image/nav2.png);
+    background-image: linear-gradient(180deg,#1d3655, #000000 70%,#1d3655) ;background-attachment: fixed;
     background-size: 100%;
   }
   .ped{
@@ -21,8 +21,8 @@
   
   .flip {
     background-color: transparent;
-    width: 220px;
-    height: 300px;
+    width: 120px;
+    height: 100px;
     margin-left: 300px;
     perspective: 1000px;
     }
@@ -470,19 +470,6 @@
     pointer-events: none; 
   }
   
-  
-  @media (max-width: 1100px)
-  {
-     .flip{
-       margin-left: 100px;
-     }
-  }
-  @media (max-width: 900px)
-  {
-     .flip{
-       display: none;
-     }
-  }
  
   @media (max-width: 1270px)
   {
@@ -494,7 +481,7 @@
        right: 200px;
      }
      .container:hover #search{
-       width: 100px;
+       width: 200px;
      }
      #search:focus, 
      #search:active{
@@ -515,31 +502,36 @@
       right: -150px;
       top:10px;
     }
+    #search:focus, 
+     #search:active{
+       width: 200px;
+     }
     #search{
       width: 200px;
       height: 40px;
       background-color:rgb(55, 178, 219);
       border-radius: 0%;
     }
-    .container:hover #search{
-      width: 200px;
-    }
     .container .lupa{
       margin-left: 10px;
       margin-top: 10px;
     }
   }
+   
+  @media (max-width: 1100px)
+  {
+     .flip{
+       margin-left: 100px;
+     }
+  }
   @media (max-width: 830px)
   {
     #base_menu{
-      height: 50px;
+      height: 120px;
     }
 
     #search{
       height: 30px;
-    }
-    .container:hover #search{
-      width: 200px;
     }
     .container .lupa{
       margin-left: 7px;
@@ -547,7 +539,29 @@
     }
 
     .menu__btn{
-      top: 10px;
+      top: 20px;
+    }
+  }
+  @media (max-width: 640px)
+  {
+    .flip{
+      margin-left: 110px;
+    }
+    .search-button{
+      top:70px;
+    }
+    #search{
+      height: 30px;
+    }
+    .container:hover #search{
+      width: 200px;
+    }
+    .container .lupa{
+      margin-left: 9px;
+      margin-top: 5px;
+    }
+    .menu__btn{
+      top: 20px;
     }
   }
   @media (max-width: 630px)
@@ -568,28 +582,35 @@
        z-index: 1;
      }
   }
+  
   @media (max-width: 600px)
   {
-    #base_menu{
-      height: 30px;
-    }
     .search-button{
       width: 400px;
       right: -150px;
       top:5px;
     }
+    .search-button{
+      top:70px;
+    }
     #search{
-      height: 20px;
+      width: 200px;
     }
     .container:hover #search{
       width: 200px;
     }
     .container .lupa{
-      margin-left: 1px;
-      margin-top: 1px;
+      margin-left: 9px;
+      margin-top: 5px;
     }
     .menu__btn{
-      top: 0px;
+      top: 20px;
     }
   }
- 
+
+  @media (max-width: 430px)
+  {
+    .flip{
+      margin-left: 90px;
+    }
+  }
