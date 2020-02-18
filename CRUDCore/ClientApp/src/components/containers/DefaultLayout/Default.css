@@ -550,9 +550,6 @@
     .search-button{
       top:70px;
     }
-    #search{
-      height: 30px;
-    }
     .container:hover #search{
       width: 200px;
     }
@@ -568,9 +565,6 @@
   {
     .container:hover #search{
       width: 200px;
-    }
-    #search{
-      height: 30px;
     }
     .container .lupa{
       margin-left: 7px;
@@ -593,9 +587,6 @@
     .search-button{
       top:70px;
     }
-    #search{
-      width: 200px;
-    }
     .container:hover #search{
       width: 200px;
     }
@@ -611,6 +602,9 @@
   @media (max-width: 430px)
   {
     .flip{
-      margin-left: 90px;
+      margin-left: 55px;
+    }
+    #search{
+      width: 200px;
     }
   }
