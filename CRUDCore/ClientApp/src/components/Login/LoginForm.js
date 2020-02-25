@@ -2,7 +2,7 @@
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
-import { Redirect } from "react-router";
+import { Redirect, Route } from "react-router";
 import { login } from "../../action/authAction";
 import "./login.css";
 class LoginPage extends Component {
@@ -57,6 +57,7 @@ class LoginPage extends Component {
         else {
             this.setState({ errors });
         }
+
 
     }
     render() {
@@ -118,7 +119,7 @@ class LoginPage extends Component {
         );
         return (
             this.state.done ?
-                <Redirect to="/" /> :
+                <Redirect to="/home" /> :
                 form
         );
     }
