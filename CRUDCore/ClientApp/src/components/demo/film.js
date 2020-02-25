@@ -8,7 +8,6 @@ import './defaults.css'
 import './range.css'
 import './App.css'
 import './players.css'
-import '../Home/Home.css'
 import ReactPlayer from '../../Player/ReactPlayer'
 
 
@@ -211,29 +210,6 @@ class Application extends Component {
                 А главное, вы можете не только посмотреть любимые сериалы онлайн.Все дороги ведут на CiNeMa— лучшие сериалы в жанре драма, комедия, ситком, детектив, романтика, криминал, триллер, ужасы, ромком, подростковые сериалы и многое другое. Смотрите новые сериалы 2019 года в свободном доступе без блокировок — только в хорошем качестве и с самой топовой озвучкой!</footer>
                 </div> 
         </section>
-                <section className='section'>
-                    <table>
-                        <tbody>
-
-                            <tr>
-
-                                <td>
-                                    {/* {this.renderLoadButton('https://www.youtube.com/watch?v=tInCbMNqRxo', 'start')} */}
-
-                                </td>
-                            </tr>
-                            <tr>
-                                {/* <th>Custom URL</th>
-                                <td>
-                                    <input ref={input => { this.urlInput = input }} type='text' placeholder='Enter URL' />
-                                    <button onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })}>Load</button>
-                                </td> */}
-                            </tr>
-                        </tbody>
-                    </table>
-
-                </section>
-
             </div>
         )
     }

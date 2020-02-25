@@ -130,7 +130,7 @@ class Home extends Component {
                                     <div>
                                         <p align="center">{Film_names[0]}</p>
                                     </div>
-                                    <Link className="foto" to="/Application"></Link>
+                                    <Link className="foto" to="/app_film"></Link>
                                     <div>
                                         <p align="center">Год:&nbsp;2010</p>
                                     </div>
@@ -157,7 +157,7 @@ class Home extends Component {
                                     <div>
                                         <p align="center"> {Film_names[2]}</p>
                                     </div>
-                                    <Link className="foto2" to="/film" ></Link>
+                                    <Link className="foto2" to="/film_asd" ></Link>
                                     <div>
                                     </div>
                                 </div>

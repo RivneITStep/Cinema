@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { findDOMNode } from 'react-dom'
-import { hot } from 'react-hot-loader'
 import screenfull from 'screenfull'
 import { format } from 'date-fns'
 import { connect } from "react-redux";
@@ -10,7 +9,6 @@ import './defaults.css'
 import './range.css'
 import './App.css'
 import './players.css'
-import '../Home/Home.css'
 import ReactPlayer from '../../Player/ReactPlayer'
 
 
@@ -180,28 +178,11 @@ class Application extends Component {
             }
         })
     }
-    // handlePageChange(pageNumber) {
-    //     console.log(`active page is ${pageNumber}`);
-    //     this.setState({activePage: pageNumber});
-    //   }
-    //////////////////////////
-
     render() {
         const { url, playing, controls, light, volume, muted, loop, playbackRate, pip } = this.state
         const { user } = this.props.auth;
         return (
-        //     <div>
-        //     <Pagination
-        //       activePage={this.state.activePage}
-        //       itemsCountPerPage={10}
-        //       totalItemsCount={450}
-        //       pageRangeDisplayed={5}
-        //       onChange={::this.handlePageChange}
-        //     />
-        //   </div>
-
             <div className='app'>
-                
                 <section className='section'>
                     <table>
                         <tbody>
@@ -240,16 +221,12 @@ class Application extends Component {
                                                     <iframe title="asd" className="embed-responsive-item" src="//www.youtube.com/embed/WGrRbrRB51c"></iframe>
                                                 </div>
                                             </div>
-                                              
-                                                {/*class="embed-responsive embed-responsive-4by3"  */}
                                         </div>
                                         </div>
                                        
                                     </form>
                                 </td>
                             </tr>
-
-
                                 <tr>
                                     <div className='player-wrapper1'>
                                         <div className="module-button-hide">
@@ -286,42 +263,7 @@ class Application extends Component {
                                     </div>
                                 </tr>
 
-                                {/* <div className="fif" >
-                        <div className='player-wrapper'>
-                            <div className="module-button-hide">
-                                <input id="button" type="checkbox" />
-                                <label className="center" onClick={() => this.setState({ url: 'https://www.youtube.com/watch?v=TqrgAM_8FvA' })} htmlFor="button">► Начать просмотр</label>
-                            </div>
-                            <ReactPlayer
-                                ref={this.ref}
-                                className='react-player'
-                                width='100%'
-                                height='100%'
-                                url={url}
-                                pip={pip}
-                                playing={playing}
-                                controls={controls}
-                                light={light}
-                                loop={loop}
-                                playbackRate={playbackRate}
-                                volume={volume}
-                                muted={muted}
-                                onReady={() => console.log('onReady')}
-                                onStart={() => console.log('onStart')}
-                                onPlay={this.onPlay}
-                                onEnablePIP={this.onEnablePIP}
-                                onDisablePIP={this.onDisablePIP}
-                                onPause={this.onPause}
-                                onBuffer={() => console.log('onBuffer')}
-                                onSeek={e => console.log('onSeek', e)}
-                                onEnded={this.onEnded}
-                                onError={e => console.log('onError', e)}
-                                onProgress={this.onProgress}
-                                onDuration={this.onDuration}
-                            />
-                        </div>
-                    </div> */}
-
+                            
                                 <tr>
                                     <div>
                                         <div className="App">
@@ -342,7 +284,6 @@ class Application extends Component {
                                                     <span className="comment" style={{ fontStyle: 'Calibri' }}>{format(comment.date, 'DD/MMM/YYYY/HH:mm:ss')}</span>
                                                     <br></br>
                                                     <span className="comment">{comment.comment}</span>
-                                                    {/* <button onClick={this.removeComment.bind(null, comment.id)}>Удалить комментарий</button> */}
                                                 </div>)}
                                             </tr>
                                         </div>
@@ -371,5 +312,4 @@ const mapStateToProps = (state) => {
                     auth: state.auth
             };
         }
-       // ReactDOM.render(<Application />, document.getElementById("root"));
 export default connect(mapStateToProps)(Application)
