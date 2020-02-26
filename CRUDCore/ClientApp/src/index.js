@@ -4,7 +4,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
 import App from './App';
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "react-router-dom";
 import { createStore, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
@@ -13,6 +13,7 @@ import rootReducer from "./rootReducer";
 import setAutorizationToken from './utils/setAutorizationToken';
 import { setCurrentUser } from './action/authAction';
 import jwt from 'jsonwebtoken';
+import history from './history';
 // import * as reducers from './store/reducers';
 // const store = createStore(combineReducers(reducers), applyMiddleware(thunk));
 const store = createStore(
@@ -30,9 +31,9 @@ if (localStorage.jwtToken) {
 }
 
 ReactDOM.render(
-    <BrowserRouter>
+    <Router history={history}>
         <Provider store={store}>
             <App />
         </Provider>
-    </BrowserRouter>, document.getElementById('root'));
+    </Router>, document.getElementById('root'));
 

@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 import { connect } from "react-redux";
 import { Redirect, Route } from "react-router";
 import { login } from "../../action/authAction";
+// some-other-file.js
+import history from '../../history';
+
 import "./login.css";
 class LoginPage extends Component {
     state = {
@@ -43,14 +46,14 @@ class LoginPage extends Component {
         if (this.state.name === '') errors.name = "Поле є обов'язковим!"
         if (this.state.email === '') errors.email = "Поле є обов'язковим!"
         if (this.state.password === '') errors.password = "Поле є обов'язковим!"
-
+        console.log(this.props);
         const isValid = Object.keys(errors).length === 0
         if (isValid) {
             const { password,name,email } = this.state;
             this.setState({ isLoading: true });
             this.props.login({Name:name, Password: password,Email:email })
                 .then(
-                    () => this.setState({ done: true }),
+                    () => history.push('/home'),// console.log(this.props),
                     (err) => this.setState({ errors: err.response.data, isLoading: false })
                 );
         }
@@ -62,6 +65,7 @@ class LoginPage extends Component {
     }
     render() {
         const { errors, isLoading } = this.state;
+        console.log(this.props.history);
         const form = (
             <form onSubmit={this.onSubmitForm} id="form-content">
 
@@ -118,9 +122,7 @@ class LoginPage extends Component {
         </form>
         );
         return (
-            this.state.done ?
-                <Redirect to="/" /> :
-                form
+            form
         );
     }
 }
