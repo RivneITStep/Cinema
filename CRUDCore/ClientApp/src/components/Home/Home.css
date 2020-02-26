@@ -124,9 +124,9 @@ body {
   background-size: cover;
   position: absolute;
   align-content: center;
-  width:100vh;
-  height:1000vw;
-  margin-left: -780px;
+  width:900px;
+  height:2000px;
+  margin-left: -800px;
   margin-top: -80px;
   z-index: -1;
   font-family: Georgia, 'Bowlby One SC', Times, serif;
@@ -152,39 +152,66 @@ body {
     margin-left: 300px;
   }
 }
-
+@media (max-width: 1200px)
+{
+  #container {
+    width:1000px;
+  }
+}
 @media (max-width: 979px)
 {
   #container .box > div{
-    margin-left: 400px;
+    margin-left: -160px;
+    flex-wrap: wrap;
+  }
+  #container{
+    width: 850px;
+    height: 900px;
+    margin-left: -270px;
+    margin-top: 0px;
   }
  
+}
+@media (max-width: 920px)
+{
+  #container{
+    height: 700px;
+    margin-left: -150px;
+    margin-top: 0px;
+  }
+ 
+}
+@media (max-width: 830px)
+{
+  #container{
+    width: 800px;
+  }
 }
 @media (max-width: 767px)
 {
   #container .box > div{
-    margin-left: 500px;
+    margin-left: -100px;
   }
  
 }
 @media (max-height: 666px)
 {
   #container .box > div{
-    margin-top: -200px;
+    margin-top: -100px;
   }
 }
 
 @media (max-width: 620px)
 {
   #container .box > div{
-    margin-left: 500px;
+    margin-left: -100px;
   }
  
 }
 @media (max-width:550px)
 {
   #container .box > div{
-    margin-left: 600px;
+    margin-left: -100px;
   }
 }
 

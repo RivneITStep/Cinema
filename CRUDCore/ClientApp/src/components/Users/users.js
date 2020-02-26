@@ -2,7 +2,7 @@ import React from 'react';
 import './users.css';
 // import $ from "jquery";
 
-async function getDatafromDB(){
+async function getDatafromDB() {
 	// var pg = require('pg');
 	// var connectionString = "postgres://postgres:mypass@91.238.103.120/ip:5432/mydb";
 	// var pgClient = new pg.Client(connectionString);
@@ -11,7 +11,7 @@ async function getDatafromDB(){
 	// query.on("row", function(row,result){
 
 	// 	result.addRow(row);
-		
+
 	// 	});
 }
 export class NavMenu extends React.Component {
@@ -19,9 +19,9 @@ export class NavMenu extends React.Component {
 		super(props);
 
 	}
-	
+
 	render() {
-		getDatafromDB();
+	
 		return (
 			<div>
 				<div class="container">

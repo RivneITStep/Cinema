@@ -7,21 +7,34 @@
 }
 .section {
   display: inline-block;
-  margin-left: -400px;
+  margin-left: -500px;
   text-align: left;
   vertical-align: top;
   /* background-color: rgb(28, 34, 49);  */
   background-image: url(../../image/group_4.png)  ;
   border-radius: 10px;
   padding: 10px;
+  width: 1200px;
 }
-
-.filmtext{
+#photo{
+  margin-left: 10px;
+}
+#filmtext{
   color: white;
   font-size:2em;
-  margin-left: 30px;
+  margin-left: 40px;
+  width: 160px;
+  margin-bottom: -30px;
   
 }
+#text_g{
+  font-size: 15px;
+    color: white;
+    margin: 5px;
+    margin-left: -200px;
+    width: 600px;
+}
+
 .player-wrapper {
   width: 580px;
   height: 370px;
@@ -36,7 +49,6 @@
 }
 .react-player {
   margin-bottom: 10px;
-  margin-top: -100px;
   background: rgb(3, 1, 1);
   border-radius: 20px;
 }
@@ -51,17 +63,19 @@
 
 .textarea{
   margin-top: 150px;
-  width: 1200px;
+  width: 1175px;
   height: 70px;
   background-color: rgb(45, 49, 70);
   color: rgb(255, 255, 255);
-  margin-left: 12px;
+  margin-left: 30px;
+  min-height: 50px;
 }
 .addComment{
   float: right;
   background-color: #3cce7b;
   color: rgb(255, 255, 255);
   border-radius: 0px;
+  
 }
 .div{
   width: 600px;
@@ -71,11 +85,12 @@
 .comment{
   color: rgb(255, 255, 255);
   float: left;
+  
 }
 
 .CommentPlace{
-  margin-left: 13px;
-  width: 1200px;
+  margin-left: 30px;
+  width: 1175px;
   height: 70px;
   background-color: rgb(45, 49, 70);
   color: rgb(255, 255, 255);
@@ -88,11 +103,11 @@ p{
   border: 2px double ;
   background: rgba(2, 2, 2, 0.24); 
   padding: 10px; 
-  margin-top: 90px;
+  margin-top: 0px;
   margin-left: 17px;
   color: white;
   border-radius: 10px;
-  width: 1190px;
+  width: 1170px;
 } 
 
 .center{
@@ -105,16 +120,25 @@ p{
   user-select: none;
   padding: .5em 2em;
   outline: none;
-  border-radius: 1000px;
+  border-radius: 5px;
   transition: 0.2s;
   position: relative; 
   top: 210px; 
   font-size: 30px;
   
 }
+.right{
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 200px;
+}
+.center:hover{
+  background-color: rgb(77, 77, 77);
+}
 @media (max-width: 1300px)
 {
   .section{
+    margin-left: -300px;
     width: 1000px;
   }
   .right{
@@ -136,20 +160,26 @@ p{
     margin-left: -300px;
   }
 }
-@media (max-width: 950px)
+@media (max-width: 1060px)
 {
   .section{
     width: 800px;
     margin-left: -200px;
   }
-  .row{
-    margin-right:-150px ;
+  .media{
+    margin-right:-100px ;
   }
   .textarea{
     width: 775px;
   }
   .CommentPlace{
     width: 775px;
+  }
+  .footer{
+    width: 770px;
+  }
+  #text_g{
+    width: 500px;
   }
 }
 
@@ -158,18 +188,26 @@ p{
   .section{
     width: 700px;
   }
-  .col-6{
-    display: none;
-  }
   .right{
     display: block;
-    margin-left: 290px;
+    margin-right: 685px;
+    margin-top: 20px;
+    margin-left: -50px;
+  }
+  .embed-responsive{
+    width: 90%;
   }
   .textarea{
     width: 675px;
   }
   .CommentPlace{
     width: 675px;
+  }
+  .footer{
+    width: 670px;
+  }
+  #text_g{
+    display: none;
   }
 }
 @media (max-width: 760px)
@@ -179,10 +217,11 @@ p{
     margin-left: -100px;
   }
   .right{
-    margin-left: 240px;
+    margin-left: -130px;
   }
   .player-wrapper1 {
     width: 500px ;
+    height: 300px;
   }
   .center{
     margin-left: 100px;
@@ -192,5 +231,54 @@ p{
   }
   .CommentPlace{
     width: 575px;
+  }
+  .footer{
+   
+    width: 570px;
+  }
+  .react-player{
+    width: 500px;
+  }
+}
+@media (max-width: 635px)
+{
+  .section{
+    width: 400px;
+  }
+  .right{
+    display: none;
+  }
+  .player-wrapper1 {
+    width: 300px ;
+  }
+  .center{
+    margin-left: 0px;
+    width: 310px;
+  }
+  .textarea{
+    width: 375px;
+  }
+  .CommentPlace{
+    width: 375px;
+  }
+  .media{
+    display: block;
+    width: 800px;
+  }
+  .col-6{
+    display: block;
+    float: left;
+  }
+  .footer{
+   display: none;
+  }
+  .section{
+    text-align: center;
+  }
+}
+@media (max-width: 600px)
+{
+  .section{
+    margin-left: -30px;
   }
 }

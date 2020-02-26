@@ -136,5 +136,3 @@ export default class ReactPlayer extends Component {
 }
 
 export { default as YouTube } from '../components/players/YouTube'
-export { default as SoundCloud } from '../components/players/SoundCloud'
-export { default as FilePlayer } from '../components/players/FilePlayer'

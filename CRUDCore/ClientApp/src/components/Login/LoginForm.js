@@ -119,7 +119,7 @@ class LoginPage extends Component {
         );
         return (
             this.state.done ?
-                <Redirect to="/home" /> :
+                <Redirect to="/" /> :
                 form
         );
     }

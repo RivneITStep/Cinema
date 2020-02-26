@@ -138,7 +138,7 @@ const mapState = (state) => {
   return {
     isAuthenticated: state.auth.isAuthenticated,
     user: state.auth.user
-  }
+  };
 }
 
 export default connect(mapState, logout)(NavMenu)
