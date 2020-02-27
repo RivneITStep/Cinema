@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { connect } from "react-redux";
-import { Redirect } from "react-router";
 import { register } from "../../action/authAction";
+import history from '../../history';
 import './registration.css';
 class SignUpForm extends Component {
 
@@ -56,9 +56,7 @@ class SignUpForm extends Component {
             this.setState({ isLoading: true });
             this.props.register({ Name: name, Password: password, Email: email })
                 .then(
-                    () => {
-                        this.setState({ done: true });
-                    },
+                    () => () => history.push('/home'),//Redirect to home
                     (err) => this.setState({ errors: err.response.data, isLoading: false })
                 );
         }
@@ -142,30 +140,6 @@ class SignUpForm extends Component {
             </form>
         );
         return (
-            //     <form action="onSubmitForm" className="form">
-            //     <div className="form__field">
-            //         <input type="text" name="name" placeholder="Имя*" required />
-            //     </div>
-            //     <div className="form__field">
-            //         <input type="email" name="name" placeholder="E-Mail" />
-            //         <span className="form__error">Это поле должно содержать E-Mail в формате example@site.com</span>
-            //     </div>
-            //     <div className="form__field">
-            //         <input type="tel" name="name" placeholder="Телефон" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" minLength="18" maxLength="18" />
-            //         <span className="form__error">Это поле должно содержать телефон в формате +7 (123) 456-78-90</span>
-            //     </div>
-            //     <div className="form__field">
-            //         <input type="url" name="name" placeholder="Ваш сайт" />
-            //         <span className="form__error">Это поле должно содержать URL в формате http://mysite.ru</span>
-            //     </div>
-            //     <div className="form__field">
-            //         <input type="number" name="name" placeholder="Ваш рост (см)" min="100" max="250" />
-            //         <span className="form__error">Ваш рост должен быть не меньше 100 и не больше 250 см</span>
-            //     </div>
-            //     <button type="submit">Отправить</button>
-            // </form>
-            this.state.done ?
-                <Redirect to="/" /> :
                 form
         );
     }

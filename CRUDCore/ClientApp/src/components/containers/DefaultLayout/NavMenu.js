@@ -122,7 +122,7 @@ export class NavMenu extends React.Component {
           <li className="nav-item">
             {
               isAuthenticated ?
-                <Link className="menu__item" to="/" onClick={(e) => { e.preventDefault(); this.props.logout(); }}>LogOut</Link> :
+                <Link className="menu__item" to="/home" onClick={(e) => { e.preventDefault(); this.props.logout(); }}>LogOut</Link> :
 
                 <Link className="menu__item" to="/login">Login</Link>
             }

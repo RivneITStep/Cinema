@@ -17,15 +17,14 @@
   width: 1200px;
 }
 #photo{
-  margin-left: 10px;
+  margin-left: 55px;
 }
 #filmtext{
   color: white;
   font-size:2em;
-  margin-left: 40px;
+  margin-left: 113px;
   width: 160px;
   margin-bottom: -30px;
-  
 }
 #text_g{
   font-size: 15px;
@@ -221,7 +220,7 @@ p{
   }
   .player-wrapper1 {
     width: 500px ;
-    height: 300px;
+    height: 340px;
   }
   .center{
     margin-left: 100px;
@@ -249,12 +248,14 @@ p{
     display: none;
   }
   .player-wrapper1 {
-    width: 300px ;
+    height: 280px;
+    width: 372px;
   }
-  .center{
-    margin-left: 0px;
-    width: 310px;
-  }
+  .center {
+    margin-left: -1px;
+    width: 293px;
+    margin-bottom: 35px;
+}
   .textarea{
     width: 375px;
   }

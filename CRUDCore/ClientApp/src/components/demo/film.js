@@ -208,7 +208,7 @@ class Application extends Component {
                         <div className="col-3 right">
                             <div className="aside">
                                 <div className="embed-responsive embed-responsive-4by3">
-                                    <iframe title="asd" className="embed-responsive-item" src="//www.youtube.com/embed/WGrRbrRB51c"></iframe>
+                                    <iframe title="asd" className="embed-responsive-item" src="//www.youtube.com/embed/kmX3c6hfDbI"></iframe>
                                 </div>
                             </div>
                         </div>

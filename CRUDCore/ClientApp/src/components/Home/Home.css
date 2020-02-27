@@ -112,106 +112,115 @@ body {
   left: -4px;
   box-shadow: 20px 20px 5px 0 rgba(0,0,0,.2);
   text-align: center;
+  margin-left: 50px;
 }
 
 #container {
   align-self: center;
   overflow-y:scroll;
   overflow-x:hidden;
-  transform: rotate(270deg) translateX(-100%);
   transform-origin: top left;
   background: url(../../image/rectangle_6.png) no-repeat ;
   background-size: cover;
   position: absolute;
   align-content: center;
-  width:900px;
-  height:2000px;
-  margin-left: -800px;
+  width:400%;
+  height:900px;
+  margin-left: -620px;
   margin-top: -80px;
   z-index: -1;
   font-family: Georgia, 'Bowlby One SC', Times, serif;
 
 }
 #container2 {
-  margin-top: 200px;
-  margin-left: -100px;
-  transform: rotate(90deg) translateY(-100vh);
+  margin-bottom: 100px;
+  margin-top: -50px;
+  margin-left: 200px;
   transform-origin: top left;
-  white-space:nowrap;
   font-size:0;
 }
-@media (max-width: 1670px)
+@media (max-width: 1640px)
 {
-  #container .box > div{
-    margin-left: 200px;
+  #container{
+    width:300%;
+    margin-left: -420px;
+  }
+  #container2 {
+    margin-left: 150px;
   }
 }
-@media (max-width: 1400px)
+@media (max-width: 1230px)
 {
-  #container .box > div{
-    margin-left: 300px;
+  #container{
+    width:200%;
+    margin-left: -220px;
   }
-}
-@media (max-width: 1200px)
-{
-  #container {
-    width:1000px;
+  #container2 {
+    margin-left: 100px;
   }
 }
 @media (max-width: 979px)
 {
-  #container .box > div{
-    margin-left: -160px;
-    flex-wrap: wrap;
+  #container2 {
+    margin-left: 80px;
   }
-  #container{
-    width: 850px;
-    height: 900px;
-    margin-left: -270px;
-    margin-top: 0px;
-  }
- 
-}
-@media (max-width: 920px)
-{
-  #container{
-    height: 700px;
-    margin-left: -150px;
-    margin-top: 0px;
-  }
- 
 }
 @media (max-width: 830px)
 {
   #container{
-    width: 800px;
+    width:160%;
+    margin-left: -150px;
+  }
+  #container2 {
+    margin-left: 20px;
   }
 }
-@media (max-width: 767px)
+@media (max-width: 680px)
 {
   #container .box > div{
-    margin-left: -100px;
+    width: 120px;
+    height: 200px;
   }
- 
-}
-@media (max-height: 666px)
-{
-  #container .box > div{
-    margin-top: -100px;
+  p{
+    font-size: 15px;
+  }
+  .foto{
+    margin-left: 15px;
+    width: 91px;
+    height: 136px;
+  }
+  .foto1{
+    margin-left: 15px;
+    width: 91px;
+    height: 127px;
+  }
+  .foto2{
+    margin-left: 15px;
+    width: 91px;
+    height: 134px;
+  }
+  #container .box{
+    width: 184px;
+    height: 230px;
+    margin-left: -45px;
+  }
+  #container{
+    width: 135%;
+    margin-left: -95px;
+  }
+  #container2{
+    margin-left: 60px;
   }
 }
 
-@media (max-width: 620px)
+@media (max-width:570px)
 {
-  #container .box > div{
-    margin-left: -100px;
+  #container {
+    width: 107%;
+    margin-left: -30px;
   }
- 
-}
-@media (max-width:550px)
-{
-  #container .box > div{
-    margin-left: -100px;
+  #container2 {
+  margin-left: 4px;
   }
 }
 

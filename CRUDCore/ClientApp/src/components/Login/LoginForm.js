@@ -1,12 +1,10 @@
-﻿import React, { Component } from 'react';
+﻿import React, { Suspense, Component } from "react";
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
-import { Redirect, Route } from "react-router";
 import { login } from "../../action/authAction";
-// some-other-file.js
 import history from '../../history';
-
+import $ from "jquery";
 import "./login.css";
 class LoginPage extends Component {
     state = {
@@ -53,7 +51,7 @@ class LoginPage extends Component {
             this.setState({ isLoading: true });
             this.props.login({Name:name, Password: password,Email:email })
                 .then(
-                    () => history.push('/home'),// console.log(this.props),
+                    () => history.push('/home'),//Redirect to home
                     (err) => this.setState({ errors: err.response.data, isLoading: false })
                 );
         }
@@ -64,7 +62,26 @@ class LoginPage extends Component {
 
     }
     render() {
+       
         const { errors, isLoading } = this.state;
+        if (isLoading){
+            
+            setTimeout(function() {
+                $('.inner div').addClass('done'); 
+                
+                setTimeout(function() {
+                  $('.inner div').addClass('page'); 
+                  
+                  setTimeout(function() {
+                    $('.pageLoad').addClass('off'); 
+                    
+                    $('body, html').addClass('on'); 
+                    
+                    
+                  }, 500)
+                }, 500)
+              }, 1500)
+        }
         console.log(this.props.history);
         const form = (
             <form onSubmit={this.onSubmitForm} id="form-content">
@@ -122,7 +139,15 @@ class LoginPage extends Component {
         </form>
         );
         return (
-            form
+            <Suspense fallback={<div className="pageLoad">
+      <div className="inner">
+        <div></div>
+        <div></div> 
+        <div></div>
+        <div></div>
+      </div> </div>}>
+            {form}
+        </Suspense>
         );
     }
 }
