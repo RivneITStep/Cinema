@@ -24,7 +24,7 @@ export class NavMenu extends React.Component {
 	
 		return (
 			<div>
-				<div class="container">
+				<div className="container">
 					<table>
 						<thead>
 							<tr>

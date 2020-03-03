@@ -36,6 +36,8 @@
       min-height: 690px;
       float: left;
       background: linear-gradient(45deg, #49a09d, #5f2c82);
+      min-width: 300px;
+      z-index: 1000;
     }
     .slidebar .logo {
       height: 145px;
@@ -269,7 +271,10 @@
       opacity: 0; 
       pointer-events: none; 
     }
-    
-    
-    
-    
+  @media (max-width: 850px)
+  {
+    .slidebar{
+      min-width: 200px;
+      width: 200px;
+    }
+  }
