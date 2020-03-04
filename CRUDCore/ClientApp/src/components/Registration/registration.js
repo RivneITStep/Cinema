@@ -4,6 +4,7 @@ import classnames from 'classnames';
 import { connect } from "react-redux";
 import { register } from "../../action/authAction";
 import history from '../../history';
+import ReCAPTCHA from "react-google-recaptcha";
 import './registration.css';
 class SignUpForm extends Component {
 
@@ -49,7 +50,6 @@ class SignUpForm extends Component {
         if (this.state.password === '') errors.password = "Поле не може бути пустим."
         if (this.state.confPassword === '') errors.confPassword = "Поле не може бути пустим."
         if (this.state.password !== this.state.confPassword) errors.confPassword = "Поле не може бути пустим.Пароль має містити А-Я,а-я,0-9,та символи, пароль не може містити менш ніж 8 символів"
-
         const isValid = Object.keys(errors).length === 0
         if (isValid) {
             const { password, name, email } = this.state;
@@ -66,7 +66,10 @@ class SignUpForm extends Component {
     }
 
     render() {
-
+        window.recaptchaOptions = {
+            useRecaptchaNet: true,
+          };
+        const grecaptchaObject = window.grecaptcha;
         const { errors, isLoading } = this.state;
         const form = (
             <form onSubmit={this.onSubmitForm} className="form" id="form-content">
@@ -127,7 +130,11 @@ class SignUpForm extends Component {
                         placeholder="confPassword"
                         onChange={this.handleChange} />
                 </div>
-
+                <ReCAPTCHA
+                  ref={(r) => this.recaptcha = r}
+                  sitekey="Your client site key"
+                  grecaptcha={grecaptchaObject}
+                />,
 
 
                 <div className="form-group">

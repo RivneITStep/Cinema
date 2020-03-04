@@ -142,16 +142,28 @@
     width: 1000px;
   }
 }
+@media (max-width: 1543px) 
+{
+  .wrap {
+    margin-left: -334px;
+  }
+}
 @media (max-width: 1150px)
 {
   .wrap .main{
     width: 800px;
   }
+  .cabtext{
+    font-size: 20px;
+  }
 }
-@media (max-width: 980px)
+@media (max-width: 1000px)
 {
   .wrap .main{
     width: 700px;
+  }
+  .wrap {
+    margin-left: -200px;
   }
 }
 @media (max-width: 770px)
@@ -167,5 +179,18 @@
   .cab{
     width: 490px;
     height: 490px;
+  }
+  .wrap {
+    margin-left: -100px;
+  }
+}
+@media (max-width: 540px)
+{
+  .wrap .main {
+    width: 390px;
+    height: 490px;
+  }
+  .wrap {
+    margin-left: -35px;
   }
 }
