@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CRUDCore.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/Users")]
     //[ApiController]
     public class UsersController : ControllerBase
     {
@@ -23,28 +23,29 @@ namespace CRUDCore.Controllers
         [HttpGet]
         public List<UserItemViewModel> GetUsers()
         {
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             var model = new List<UserItemViewModel>
             {
                 new UserItemViewModel
                 {
-                    Id=1, Email="jon@gg.ss",
+                    Id=1 , Email="jon@gg.ss",
                     Roles = new List<RoleItemViewModel>
                     {
                         new RoleItemViewModel { Id=2, Name="Admin"}
                     }
                 },
-                new UserItemViewModel
-                {
-                    Id=2, Email="bombelyk@gg.ss",
-                    Roles = new List<RoleItemViewModel>
-                    {
-                        new RoleItemViewModel { Id=2, Name="Admin"},
-                        new RoleItemViewModel { Id=3, Name="Meson"}
-                    }
-                }
-            };
+            //    new UserItemViewModel
+            //    {
+            //        Id=2, Email="bombelyk@gg.ss",
+            //        Roles = new List<RoleItemViewModel>
+            //        {
+            //            new RoleItemViewModel { Id=2, Name="Admin"},
+            //            new RoleItemViewModel { Id=3, Name="Meson"}
+            //        }
+            //    }
+        };
+
             return model;
         }
-    }
+}
 }

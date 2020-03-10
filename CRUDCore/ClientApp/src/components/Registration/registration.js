@@ -4,15 +4,14 @@ import classnames from 'classnames';
 import { connect } from "react-redux";
 import { register } from "../../action/authAction";
 import history from '../../history';
-import ReCAPTCHA from "react-google-recaptcha";
 import './registration.css';
 class SignUpForm extends Component {
     constructor() {
         super();
-        this.handleExpired = this.handleExpired.bind(this);
-        this.handleErrored = this.handleErrored.bind(this);
-        this.handleChange = this.handleChange.bind(this);
-        this.handleRecaptchaRef = this.handleRecaptchaRef.bind(this);
+        // this.handleExpired = this.handleExpired.bind(this);
+        // this.handleErrored = this.handleErrored.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleRecaptchaRef = this.handleRecaptchaRef.bind(this);
       }
     state = {
         email: '',
