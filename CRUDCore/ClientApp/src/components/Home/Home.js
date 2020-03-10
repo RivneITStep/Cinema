@@ -6,12 +6,7 @@ class Home extends Component {
     state = {
         isShowModal: false,
     }
-    redirectToAddUser = (e) => {
-        const { history } = this.props;
-        e.preventDefault();
-        console.log('-----перехід на іншу сторінку------');
-        history.push('/user/add');
-    } 
+   
     
     render() {
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];

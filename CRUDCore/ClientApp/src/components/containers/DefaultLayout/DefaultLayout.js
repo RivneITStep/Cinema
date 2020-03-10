@@ -7,21 +7,21 @@ import $ from "jquery";
 class DefaultLayout extends Component {
 
   render() {
-    setTimeout(function() {
-      $('.inner div').addClass('done'); 
+    // setTimeout(function() {
+    //   $('.inner div').addClass('done'); 
       
-      setTimeout(function() {
-        $('.inner div').addClass('page'); 
+    //   setTimeout(function() {
+    //     $('.inner div').addClass('page'); 
         
-        setTimeout(function() {
-          $('.pageLoad').addClass('off'); 
+    //     setTimeout(function() {
+    //       $('.pageLoad').addClass('off'); 
           
-          $('body, html').addClass('on'); 
+    //       $('body, html').addClass('on'); 
           
           
-        }, 500)
-      }, 500)
-    }, 1500)
+    //     }, 500)
+    //   }, 500)
+    // }, 1500)
     return (
         <Layout>
             <Helmet>
