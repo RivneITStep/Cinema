@@ -1,14 +1,17 @@
-#form-content2
+#form-content
 {
     padding: 5%;
     margin-bottom: 2%;
+    margin-left: -400px;
+    right:100px;
     background: url(../../image/container-bg.png) no-repeat;
     background-size:contain;
-    width: 300%;
     height: 700px;
+    width: 900px;
+    z-index: 0;
 }
 
-.btnSubmit2
+.btnSubmit
 {
     border:none;
     border-radius:1.5rem;
@@ -18,12 +21,53 @@
     background: -webkit-linear-gradient(right, #1d3655, #000000);
     color: #fff;
     margin-top:60px;
-    margin-left:80%;
+    margin-left:77%;
 
 }
-#row2{
-    margin: 5px;
-    margin-top: 120px;
-    margin-left: 80%;
+#row1{
+    margin-top : 110px;
+    margin-left: 77%;
     width: 200px;
+}
+#row{
+    margin-top : 10px;
+    margin-left: 77%;
+    width: 200px;
+}
+@media (max-width: 680px)
+{
+    #form-content{
+        height: 100px;
+        width: 300px;
+        margin-left: -100px;
+    }
+    #row{
+        width: 200px;
+        margin-left: 67%;
+    }
+    #row1{
+        margin-top : 110px;
+        margin-left: 67%;
+        width: 200px;
+    }
+}
+@media (max-width: 1200px)
+{
+    #form-content{
+        height: 500px;
+        width: 700px;
+        margin-left: -200px;
+    }
+    #row{
+        width: 200px;
+        margin-left: 67%;
+    }
+    #row1{
+        margin-top : 110px;
+        margin-left: 67%;
+        width: 200px;
+    }
+    .btnSubmit{
+        margin-top:0px;
+    }
 }

@@ -27,7 +27,7 @@ class Application extends Component {
         controls: true,
         light: false,
         volume: 0.8,
-        muted: false,
+        muted: true,
         played: 0,
         loaded: 0,
         duration: 0,
@@ -201,6 +201,7 @@ class Application extends Component {
         //   </div>
 
             <div className='app'>
+                
                 <section className='section'>
                     <table>
                         <tbody>
@@ -243,6 +244,7 @@ class Application extends Component {
                                                 {/*class="embed-responsive embed-responsive-4by3"  */}
                                         </div>
                                         </div>
+                                       
                                     </form>
                                 </td>
                             </tr>
@@ -359,6 +361,7 @@ class Application extends Component {
                         </tbody>
                     </table>
                 </section>
+             
             </div>
                 )
             }

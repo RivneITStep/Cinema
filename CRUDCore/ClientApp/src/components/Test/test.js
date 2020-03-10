@@ -17,7 +17,7 @@ class SignUpForm extends Component {
             <a href=""></a>
           </div>
           <ul>
-            <li><a href="#dashboard" id="targeted">dashboard</a></li>
+            <li><a href="#dashboard" onClick="showContent('../Admin_Panel.js')">dashboard</a></li>
             <li><a href="#posts">posts</a></li>
             <li><a href="#media">media</a></li>
             <li><a href="#pages">pages</a></li>

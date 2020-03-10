@@ -62,7 +62,7 @@ class LoginPage extends Component {
     render() {
         const { errors, isLoading } = this.state;
         const form = (
-            <form onSubmit={this.onSubmitForm} id="form-content2">
+            <form onSubmit={this.onSubmitForm} id="form-content">
 
             {
                 !!errors.invalid ?
@@ -71,7 +71,7 @@ class LoginPage extends Component {
                 </div> : ''}
 
 
-            <div id="row2" className={classnames('form-group', { 'has-error': !!errors.name })}>
+            <div id="row1" className={classnames('form-group', { 'has-error': !!errors.name })}>
                 <input type="text"
                     className="form-control"
                     id="name"
@@ -83,7 +83,7 @@ class LoginPage extends Component {
             </div>
 
 
-            <div id="row2" className={classnames('form-group', { 'has-error': !!errors.email })}>
+            <div id="row" className={classnames('form-group', { 'has-error': !!errors.email })}>
                 <input type="text"
                     className="form-control"
                     id="email"
@@ -96,7 +96,7 @@ class LoginPage extends Component {
 
 
 
-            <div id="row2" className={classnames('form-group', { 'has-error': !!errors.password })}>
+            <div id="row" className={classnames('form-group', { 'has-error': !!errors.password })}>
                 <input type="password"
                     className="form-control"
                     id="password"
@@ -110,7 +110,7 @@ class LoginPage extends Component {
 
             <div className="form-group">
                 <div className="col-md-12" >
-                    <button type="submit" className="btnSubmit2"
+                    <button type="submit" className="btnSubmit"
                         disabled={isLoading}>Sign Up <span className="glyphicon glyphicon-send"></span></button>
                 </div>
             </div>
