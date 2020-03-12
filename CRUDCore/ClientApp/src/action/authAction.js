@@ -45,10 +45,3 @@ export function register(data) {
         });
     }
 }
-export function show_data() {
-        return  axios.get(`api/Users/`)
-        .then(res => {
-          const data= res.data;
-          this.setState({ data});
-        })
-}
