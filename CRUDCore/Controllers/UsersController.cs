@@ -7,11 +7,12 @@ using CRUDCore.DAL.Entities;
 using CRUDCore.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MySql.Data.MySqlClient;
 
 namespace CRUDCore.Controllers
 {
     [Produces("application/json")]
-    [Route("api/[controller]")]
+    [Route("api/Users")]
     //[ApiController]
     public class UsersController : ControllerBase
     {
@@ -20,31 +21,55 @@ namespace CRUDCore.Controllers
         {
             _context = context;
         }
-        [HttpGet]
-        public List<UserItemViewModel> GetUsers()
+        //public List<UserItemViewModel> GetUsers()
+        //{
+        //    //Thread.Sleep(5000);
+        //    var model = new List<UserItemViewModel>
+        //    {
+        //        new UserItemViewModel
+        //        {
+        //            Id=1 , Email="jon@gg.ss",
+        //            Roles = new List<RoleItemViewModel>
+        //            {
+        //                new RoleItemViewModel { Id=2, Name="Admin"}
+        //            }
+        //        },
+        //    //    new UserItemViewModel
+        //    //    {
+        //    //        Id=2, Email="bombelyk@gg.ss",
+        //    //        Roles = new List<RoleItemViewModel>
+        //    //        {
+        //    //            new RoleItemViewModel { Id=2, Name="Admin"},
+        //    //            new RoleItemViewModel { Id=3, Name="Meson"}
+        //    //        }
+        //    //    }
+        //};
+
+        //    return model;
+        //}
+        [HttpGet("[action]")]
+        public async  Task<IActionResult> GetUsers()
         {
-            Thread.Sleep(5000);
-            var model = new List<UserItemViewModel>
+            List<UserItemViewModel> list = new List<UserItemViewModel>();
+
+            using (MySqlConnection conn = new MySqlConnection("Server = 91.238.103.120; Port = 5432; Database = mydb; User Id = myuser; Password = mypass;"))
             {
-                new UserItemViewModel
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM AspNetUsers", conn);
+                using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    Id=1, Email="jon@gg.ss",
-                    Roles = new List<RoleItemViewModel>
+                    while (reader.Read())
                     {
-                        new RoleItemViewModel { Id=2, Name="Admin"}
-                    }
-                },
-                new UserItemViewModel
-                {
-                    Id=2, Email="bombelyk@gg.ss",
-                    Roles = new List<RoleItemViewModel>
-                    {
-                        new RoleItemViewModel { Id=2, Name="Admin"},
-                        new RoleItemViewModel { Id=3, Name="Meson"}
-                    }
+                        list.Add(new UserItemViewModel()
+                        {
+                            Id = reader.GetInt32("user_id"),
+                            Email = reader.GetString("email"),
+                        });
+                        }
                 }
-            };
-            return model;
+            }
+
+            return new JsonResult(list);
         }
     }
 }

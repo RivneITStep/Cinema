@@ -8,7 +8,6 @@ import './defaults.css'
 import './range.css'
 import './App.css'
 import './players.css'
-import '../Home/Home.css'
 import ReactPlayer from '../../Player/ReactPlayer'
 
 

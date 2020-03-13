@@ -70,14 +70,7 @@ a:hover, a.active {
   width:100%;
 }
 
-.footer{
-  border: 2px double ;
-  background: rgba(2, 2, 2, 0.24); 
-  padding: 10px; 
-  margin-top: 100px;
-  color: white;
-  border-radius: 10px;
-} 
+
 ::-webkit-scrollbar {
   width: 0px;
   height: 0px;
@@ -119,113 +112,119 @@ body {
   left: -4px;
   box-shadow: 20px 20px 5px 0 rgba(0,0,0,.2);
   text-align: center;
+  margin-left: 50px;
 }
 
 #container {
-  
+  align-self: center;
   overflow-y:scroll;
   overflow-x:hidden;
-  transform: rotate(270deg) translateX(-100%);
   transform-origin: top left;
   background: url(../../image/rectangle_6.png) no-repeat ;
   background-size: cover;
   position: absolute;
   align-content: center;
-  width:100vh;
-  height:1000vw;
-  margin-left: -780px;
-  margin-top: -80px;
+  width:400%;
+  height:800px;
+  margin-left: -620px;
   z-index: -1;
   font-family: Georgia, 'Bowlby One SC', Times, serif;
-
+  box-shadow: 20px 20px 5px 0 rgba(0,0,0,.2);
+  border: solid 2px black;
+  border-radius: 50px;
 }
 #container2 {
-  margin-top: 200px;
-  margin-left: -100px;
-  transform: rotate(90deg) translateY(-100vh);
+  margin-bottom: 100px;
+  margin-top: -100px;
+  margin-left: 200px;
   transform-origin: top left;
-  white-space:nowrap;
   font-size:0;
 }
-@media (max-width: 1670px)
+@media (max-width: 1640px)
 {
-  #container .box > div{
-    margin-left: 100px;
+  #container{
+    width:300%;
+    margin-left: -420px;
+  }
+  #container2 {
+    margin-left: 150px;
   }
 }
-@media (max-width: 1400px)
+@media (max-width: 1230px)
 {
-  #container .box > div{
-    margin-left: 400px;
+  #container{
+    width:200%;
+    margin-left: -220px;
+  }
+  #container2 {
+    margin-left: 100px;
   }
 }
 @media (max-width: 979px)
 {
-  #container .box > div{
-    zoom: 110%;
-    margin-left: 400px;
-  }
-  .menu__btn{
-    zoom: 110%;
+  #container2 {
+    margin-left: 80px;
   }
 }
-@media (max-width: 767px)
+@media (max-width: 830px)
 {
-  #container .box > div{
-    zoom: 120%;
-    margin-left: 300px;
+  #container{
+    width:160%;
+    margin-left: -150px;
   }
-  .menu__btn{
-    zoom: 120%;
+  #container2 {
+    margin-left: 20px;
   }
 }
-@media (max-width: 620px)
+@media (max-width: 680px)
 {
   #container .box > div{
-    zoom: 130%;
-    margin-left: 500px;
+    width: 120px;
+    height: 200px;
   }
-  .menu__btn{
-    zoom: 130%;
+  p{
+    font-size: 15px;
   }
-}
-@media (max-width:500px)
-{
-  #container .box > div{
-    zoom: 140%;
-    margin-left: 300px;
-    margin-top:-130px ;
+  .foto{
+    margin-left: 15px;
+    width: 91px;
+    height: 136px;
   }
-  .menu__btn{
-    zoom: 140%;
+  .foto1{
+    margin-left: 15px;
+    width: 91px;
+    height: 127px;
+  }
+  .foto2{
+    margin-left: 15px;
+    width: 91px;
+    height: 134px;
+  }
+  #container .box{
+    width: 184px;
+    height: 230px;
+    margin-left: -45px;
+  }
+  #container{
+    width: 135%;
+    margin-left: -95px;
+  }
+  #container2{
+    margin-left: 60px;
   }
 }
 
-@media (max-width: 1460px)
+@media (max-width:570px)
 {
-  #container .box > div{
-    margin-left: 100px;
+  #container {
+    width: 107%;
+    margin-left: -30px;
   }
-}
-@media (max-width: 1200px)
-{
-  #container .box > div{
-    margin-left: 200px;
-  }
-}
-@media (max-width: 900px)
-{
-  #container .box > div{
-    margin-left: 300px;
+  #container2 {
+  margin-left: 4px;
   }
 }
 
-@media (max-height: 666px)
-{
-  #container .box > div{
-    margin-top: -200px;
-  }
-}
 /* 
  Translating the content's X ruines the scrollbar length. 
 

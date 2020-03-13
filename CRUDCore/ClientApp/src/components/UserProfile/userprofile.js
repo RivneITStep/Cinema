@@ -20,7 +20,7 @@ class userprofile extends Component {
             </div>
           </div>
         </div>
-        <div class="col">
+        <div className="col">
           <div className="side">
             <div className="carousel" data-flickity='{ "groupCells": true }'>
               <CarouselProvider

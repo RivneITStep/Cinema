@@ -7,21 +7,34 @@
 }
 .section {
   display: inline-block;
-  margin-left: -400px;
+  margin-left: -500px;
   text-align: left;
   vertical-align: top;
   /* background-color: rgb(28, 34, 49);  */
   background-image: url(../../image/group_4.png)  ;
   border-radius: 10px;
   padding: 10px;
+  width: 1200px;
 }
-
-.filmtext{
+#photo{
+  margin-left: 7px;
+}
+#filmtext{
   color: white;
   font-size:2em;
-  margin-left: 30px;
-  
+  margin-left: 62px;
+
+  width: 160px;
+  margin-bottom: -30px;
 }
+#text_g{
+  font-size: 15px;
+    color: white;
+    margin: 5px;
+    margin-left: -200px;
+    width: 600px;
+}
+
 .player-wrapper {
   width: 580px;
   height: 370px;
@@ -40,30 +53,142 @@
   border-radius: 20px;
 }
 
+.container .love {
+  font-size: 0.9rem;
+  color: #ff4f8f;
+}
+.container .wrapper {
+  padding-top: 50px;
+}
+.container .wrapper .like-button {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  text-decoration: none;
+  overflow: hidden;
+}
+.container .wrapper .like-button .like-overlay {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ff4f8f;
+  transform: scale(0);
+  transition: all 0.4s;
+  z-index: 0;
+}
+.container .wrapper .like-button i.not-liked {
+  display: block;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.container .wrapper .like-button i.is-liked {
+  display: none;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+}
+.container .wrapper .like-button.is-active .like-overlay {
+  transform: scale(1);
+}
+.container .wrapper .like-button.is-active i.not-liked {
+  display: none;
+}
+.container .wrapper .like-button.is-active i.is-liked {
+  display: block;
+}
+@-webkit-keyframes bouncy {
+  from, to {
+    -webkit-transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.95, 1.05);
+  }
+}
+@keyframes bouncy {
+  from, to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.9, 1.1);
+  }
+  50% {
+    transform: scale(1.1, 0.9);
+  }
+  75% {
+    transform: scale(0.95, 1.05);
+  }
+}
+.bouncy {
+  -webkit-animation: bouncy 0.6s;
+  animation: bouncy 0.6s;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.link-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #6dacff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s;
+}
+.link-button img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.link-button:hover {
+  transform: scale(1.1) rotate(180deg);
+  background: #ff4f8f;
+}
+
 .faded {
   color: rgba(0, 0, 0, .5);
 }
 
-.footer {
-  
-}
 .state{
   float: left;
 }
 
 .textarea{
   margin-top: 150px;
-  width: 1200px;
+  width: 1175px;
   height: 70px;
   background-color: rgb(45, 49, 70);
   color: rgb(255, 255, 255);
-  margin-left: 12px;
+  margin-left: 30px;
+  min-height: 50px;
 }
 .addComment{
   float: right;
   background-color: #3cce7b;
   color: rgb(255, 255, 255);
   border-radius: 0px;
+  
 }
 .div{
   width: 600px;
@@ -73,10 +198,12 @@
 .comment{
   color: rgb(255, 255, 255);
   float: left;
+  
 }
 
 .CommentPlace{
-  width: 1200px;
+  margin-left: 30px;
+  width: 1175px;
   height: 70px;
   background-color: rgb(45, 49, 70);
   color: rgb(255, 255, 255);
@@ -85,3 +212,188 @@
 p{
   margin: 0px;
 } 
+.footer{
+  border: 2px double ;
+  background: rgba(2, 2, 2, 0.24); 
+  padding: 10px; 
+  margin-top: 0px;
+  margin-left: 17px;
+  color: white;
+  border-radius: 10px;
+  width: 1170px;
+} 
+
+.center{
+  margin-left: 150px;
+  display: inline-block;
+  font-weight: 700;
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  text-decoration: none;
+  user-select: none;
+  padding: .5em 2em;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.2s;
+  position: relative; 
+  top: 210px; 
+  font-size: 30px;
+  
+}
+.right{
+  margin-top: 10px;
+  margin-left: 25px;
+  margin-right: 200px;
+}
+.center:hover{
+  background-color: rgb(77, 77, 77);
+}
+@media (max-width: 1300px)
+{
+  .section{
+    margin-left: -300px;
+    width: 1000px;
+  }
+  .right{
+    display: none;
+  }
+  .textarea{
+    width: 975px;
+  }
+  .CommentPlace{
+    width: 975px;
+  }
+  .footer{
+    width: 970px;
+  }
+}
+@media (max-width: 1150px)
+{
+  .section{
+    margin-left: -300px;
+  }
+}
+@media (max-width: 1060px)
+{
+  .section{
+    width: 800px;
+    margin-left: -200px;
+  }
+  .media{
+    margin-right:-100px ;
+  }
+  .textarea{
+    width: 775px;
+  }
+  .CommentPlace{
+    width: 775px;
+  }
+  .footer{
+    width: 770px;
+  }
+  #text_g{
+    width: 500px;
+  }
+}
+
+@media (max-width: 865px)
+{
+  .section{
+    width: 700px;
+  }
+  .right{
+    display: block;
+    margin-right: 685px;
+    margin-top: 20px;
+    margin-left: -50px;
+  }
+  .embed-responsive{
+    width: 90%;
+  }
+  .textarea{
+    width: 675px;
+  }
+  .CommentPlace{
+    width: 675px;
+  }
+  .footer{
+    width: 670px;
+  }
+  #text_g{
+    display: none;
+  }
+}
+@media (max-width: 760px)
+{
+  .section{
+    width: 600px;
+    margin-left: -100px;
+  }
+  .right{
+    margin-left: -130px;
+  }
+  .player-wrapper1 {
+    width: 500px ;
+    height: 340px;
+  }
+  .center{
+    margin-left: 100px;
+  }
+  .textarea{
+    width: 575px;
+  }
+  .CommentPlace{
+    width: 575px;
+  }
+  .footer{
+   
+    width: 570px;
+  }
+  .react-player{
+    width: 500px;
+  }
+}
+@media (max-width: 635px)
+{
+  .section{
+    width: 400px;
+  }
+  .right{
+    display: none;
+  }
+  .player-wrapper1 {
+    height: 280px;
+    width: 372px;
+  }
+  .center {
+    margin-left: -1px;
+    width: 293px;
+    margin-bottom: 35px;
+}
+  .textarea{
+    width: 375px;
+  }
+  .CommentPlace{
+    width: 375px;
+  }
+  .media{
+    display: block;
+    width: 800px;
+  }
+  .col-6{
+    display: block;
+    float: left;
+  }
+  .footer{
+   display: none;
+  }
+  .section{
+    text-align: center;
+  }
+}
+@media (max-width: 600px)
+{
+  .section{
+    margin-left: -30px;
+  }
+}

@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import './Home.css';
 import { Link } from "react-router-dom";
-//import Pagination from 'react-paginate';
+//import $ from "jquery";
 class Home extends Component {
     state = {
         isShowModal: false,
     }
-    redirectToAddUser = (e) => {
-        const { history } = this.props;
-        e.preventDefault();
-        console.log('-----перехід на іншу сторінку------');
-        history.push('/user/add');
-    } 
+   
+    
     render() {
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
         return (
@@ -24,7 +20,7 @@ class Home extends Component {
                                     <div>
                                         <p align="center">{Film_names[0]}</p>
                                     </div>
-                                    <Link className="foto" to="/Application"></Link>
+                                    <Link className="foto" to="/app_film"></Link>
                                     <div>
                                         <p align="center">Год:&nbsp;2010</p>
                                     </div>
@@ -51,7 +47,7 @@ class Home extends Component {
                                     <div>
                                         <p align="center"> {Film_names[2]}</p>
                                     </div>
-                                    <Link className="foto2" to="/film" ></Link>
+                                    <Link className="foto2" to="/film_asd" ></Link>
                                     <div>
                                     </div>
                                 </div>

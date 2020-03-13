@@ -5,6 +5,7 @@ import setAuthorizationToken from '../utils/setAutorizationToken';
 
 
 export function setCurrentUser(user) {
+    console.log("setCurrentUser");
     return {
         type: SET_CURRENT_USER,
         user
@@ -43,11 +44,4 @@ export function register(data) {
             dispatch(setCurrentUser(user));
         });
     }
-}
-export function show_data() {
-        return  axios.get(`api/Account/people`)
-        .then(res => {
-          const data= res.data;
-          this.setState({ data});
-        })
 }

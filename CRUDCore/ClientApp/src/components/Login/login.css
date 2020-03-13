@@ -24,6 +24,9 @@
     margin-left:77%;
 
 }
+.btnSubmit:active {
+    background: -webkit-linear-gradient(right, #243b57, #000000);
+}
 #row1{
     margin-top : 110px;
     margin-left: 77%;
@@ -69,5 +72,41 @@
     }
     .btnSubmit{
         margin-top:0px;
+    }
+}
+@media (max-width: 780px)
+{
+    #form-content{
+        height: 400px;
+        width: 600px;
+        margin-left: -200px;
+    }
+    #row1 {
+        margin-top: 92px;
+        margin-left: 60%;
+    }
+    #row {
+        margin-left: 60%;
+    }
+    .row {
+        margin-left: 65px;
+    }
+}
+@media (max-width: 600px)
+{
+    #form-content
+    {
+        background: none;
+    }
+    #row1 {
+        margin-left: 18%;
+        width: 349px;
+    }
+    #row {
+        margin-left: 18%;
+        width: 349px;
+    }
+    .btnSubmit {
+        margin-left: 37%;
     }
 }

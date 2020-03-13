@@ -30,29 +30,7 @@
   color: white;
   margin-left: 300px;
 }
-.text_g{
-  font-size: 15px;
-    color: white;
-    margin: 5px;
-    margin-left: 30px;
-}
-.center{
-    margin-left: 150px;
-    display: inline-block;
-    font-weight: 700;
-    background-color: rgba(255, 255, 255, 0);
-    color: white;
-    text-decoration: none;
-    user-select: none;
-    padding: .5em 2em;
-    outline: none;
-    border-radius: 1000px;
-    transition: 0.2s;
-    position: relative; 
-    top: 210px; 
-    font-size: 30px;
-    
-}
+
 .module-button-hide {
     display: inline-block;
     margin-top: 50px;

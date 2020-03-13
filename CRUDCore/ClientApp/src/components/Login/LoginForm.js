@@ -1,9 +1,10 @@
-﻿import React, { Component } from 'react';
+﻿import React, { Suspense, Component } from "react";
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import { connect } from "react-redux";
-import { Redirect } from "react-router";
 import { login } from "../../action/authAction";
+import history from '../../history';
+import $ from "jquery";
 import "./login.css";
 class LoginPage extends Component {
     state = {
@@ -43,14 +44,14 @@ class LoginPage extends Component {
         if (this.state.name === '') errors.name = "Поле є обов'язковим!"
         if (this.state.email === '') errors.email = "Поле є обов'язковим!"
         if (this.state.password === '') errors.password = "Поле є обов'язковим!"
-
+        console.log(this.props);
         const isValid = Object.keys(errors).length === 0
         if (isValid) {
             const { password,name,email } = this.state;
             this.setState({ isLoading: true });
             this.props.login({Name:name, Password: password,Email:email })
                 .then(
-                    () => this.setState({ done: true }),
+                    () => history.push('/home'),//Redirect to home
                     (err) => this.setState({ errors: err.response.data, isLoading: false })
                 );
         }
@@ -58,9 +59,30 @@ class LoginPage extends Component {
             this.setState({ errors });
         }
 
+
     }
     render() {
+       
         const { errors, isLoading } = this.state;
+        if (isLoading){
+            
+            setTimeout(function() {
+                $('.inner div').addClass('done'); 
+                
+                setTimeout(function() {
+                  $('.inner div').addClass('page'); 
+                  
+                  setTimeout(function() {
+                    $('.pageLoad').addClass('off'); 
+                    
+                    $('body, html').addClass('on'); 
+                    
+                    
+                  }, 500)
+                }, 500)
+              }, 1500)
+        }
+        console.log(this.props.history);
         const form = (
             <form onSubmit={this.onSubmitForm} id="form-content">
 
@@ -111,15 +133,21 @@ class LoginPage extends Component {
             <div className="form-group">
                 <div className="col-md-12" >
                     <button type="submit" className="btnSubmit"
-                        disabled={isLoading}>Sign Up <span className="glyphicon glyphicon-send"></span></button>
+                        disabled={isLoading}>Sign In <span className="glyphicon glyphicon-send"></span></button>
                 </div>
             </div>
         </form>
         );
         return (
-            this.state.done ?
-                <Redirect to="/" /> :
-                form
+            <Suspense fallback={<div className="pageLoad">
+      <div className="inner">
+        <div></div>
+        <div></div> 
+        <div></div>
+        <div></div>
+      </div> </div>}>
+            {form}
+        </Suspense>
         );
     }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { logout } from '../../../action/authAction';
+//import { logout } from '../../../action/authAction';
 
 import { Link } from 'react-router-dom';
 import './Default.css';
@@ -122,7 +122,7 @@ export class NavMenu extends React.Component {
           <li className="nav-item">
             {
               isAuthenticated ?
-                <Link className="menu__item" to="/" onClick={(e) => { e.preventDefault(); this.props.logout(); }}>LogOut</Link> :
+                <Link className="menu__item" to="/home" >LogOut</Link> :
 
                 <Link className="menu__item" to="/login">Login</Link>
             }
@@ -138,7 +138,7 @@ const mapState = (state) => {
   return {
     isAuthenticated: state.auth.isAuthenticated,
     user: state.auth.user
-  }
+  };
 }
 
-export default connect(mapState, logout)(NavMenu)
+export default connect(mapState)(NavMenu)
