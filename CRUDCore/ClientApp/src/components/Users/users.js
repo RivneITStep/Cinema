@@ -3,28 +3,33 @@ import './users.css';
 import PropTypes from 'prop-types';
 import axios from 'axios';
 import { connect } from 'react-redux';
+import { get_users } from "../../action/FetchUsers";
 
 class NavMenu extends React.Component {
-	constructor(props) {
-		super(props);
-	};
-	// componentDidMount() {
-	// 	axios.get(`api/Users/`)
-	// 	  .then(res => {
-	// 		const posts = res.data.data.children.map(obj => obj.data);
-	// 		this.setState({ posts });
-	// 	  });
-	//   }
+	constructor() {  
+        super();  
+        this.state = {  
+            UsersData: []  
+        }  
+    }  
+	componentDidMount() {  
+        axios.get("http://91.238.103.120/api/Users").then(response => {  
+            console.log(response.data);  
+            this.setState({  
+                UsersData: response.data  
+            });  
+        });  
+	}  
 	render() {
-		//const users = this.props.fetchUsers;
 		return (
-			// {users}</div>
-			<div></div>
+		
+		<div>
+			<div>hi</div>
+		</div>
 		);
 	}
-	// NavMenu.propTypes = {
-	// 	fetchUsers: React.PropTypes.func.isRequired
-	// }
 }
-
-export default connect(null, {})(NavMenu);
+NavMenu.propTypes = {
+	get_users: PropTypes.func.isRequired
+ }
+export default connect(null, {get_users})(NavMenu);

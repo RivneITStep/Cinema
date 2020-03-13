@@ -24,7 +24,7 @@ class AdminLayout extends Component {
       //     }, 500)
       //   }, 500)
       // }, 1500)
-    console.log('-------this-----', this.props);
+    //console.log('-------this-----', this.props);
     return (
       <Layout>
         <Suspense fallback={<div className="pageLoad">
