@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import './Home.css';
 import { Link } from "react-router-dom";
 //import $ from "jquery";
+import Add_film from '../Add_Films/Add_film';
+// const menu = [
+//     {
+//       link: '',
+//       label: ''
+//     },
+//     {
+//       link: '',
+//       label: ''
+//     },
+//     {
+//       link: '',
+//       label: ''
+//     }
+//   ];
 class Home extends Component {
     state = {
         isShowModal: false,
@@ -17,6 +32,7 @@ class Home extends Component {
         var Film_names = ['Телохранитель', 'Макс Стіл', 'Исходний код'];
         return (
             <div className="main">
+                 {/* < Add_film items={menu} /> */}
                 <div id="container">
                     <div id="container2">
                         <div className="box">

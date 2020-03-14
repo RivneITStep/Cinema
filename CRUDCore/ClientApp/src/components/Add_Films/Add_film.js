@@ -1,18 +1,26 @@
 import React from 'react';
 import './Admin.css';
+
 class Add_film extends React.Component {
 
 
-  logconsole() {
-    console.log(document.getElementById('d1').value);
-    console.log(document.getElementById('d2').value);
-    console.log(document.getElementById('d3').value);
-    console.log(document.getElementById('d4').value);
-  }
+  // logconsole() {
+  //   console.log(document.getElementById('d1').value);
+  //   console.log(document.getElementById('d2').value);
+  //   console.log(document.getElementById('d3').value);
+  //   console.log(document.getElementById('d4').value);
+  // }
 
   render() {
+    // console.log('items', this.props.items);
     return (
       <div className="cent">
+        {/* <div>
+        {this.props.items.map((item, index) =>
+          <a href={item.link} key={index}>{item.label}</a>
+        )}
+      </div> */}
+      
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Назва фільма</span>
