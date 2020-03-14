@@ -72,19 +72,6 @@ namespace CRUDCore.Controllers
             await _signInManager.SignInAsync(user, isPersistent: false);
             return Ok(CreateToken(user));
         }
-        //public List<TblCities> GetCities()
-        //{
-        //    List<TblCities> lstCity = new List<TblCities>();
-        //    lstCity = (from CityList in db.TblCities select CityList).ToList();
-        //    return lstCity;
-        //}
-
-        //[HttpGet]
-        //[Route("api/Account/users")]
-        //public IEnumerable<TblCities> Details()
-        //{
-        //    return objemployee.GetCities();
-        //}
         string CreateToken(DbUser user)
         {
             var claims = new Claim[]

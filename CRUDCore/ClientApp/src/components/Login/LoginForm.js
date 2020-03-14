@@ -133,7 +133,7 @@ class LoginPage extends Component {
             <div className="form-group">
                 <div className="col-md-12" >
                     <button type="submit" className="btnSubmit"
-                        disabled={isLoading}>Sign Up <span className="glyphicon glyphicon-send"></span></button>
+                        disabled={isLoading}>Sign In <span className="glyphicon glyphicon-send"></span></button>
                 </div>
             </div>
         </form>

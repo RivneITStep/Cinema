@@ -13,21 +13,21 @@ const AdminLayout = React.lazy(() => import('./components/containers/AdminLayout
 
 class App extends Component {
   render() {
-    setTimeout(function() {
-      $('.inner div').addClass('done'); 
+    // setTimeout(function() {
+    //   $('.inner div').addClass('done'); 
       
-      setTimeout(function() {
-        $('.inner div').addClass('page'); 
+    //   setTimeout(function() {
+    //     $('.inner div').addClass('page'); 
         
-        setTimeout(function() {
-          $('.pageLoad').addClass('off'); 
+    //     setTimeout(function() {
+    //       $('.pageLoad').addClass('off'); 
           
-          $('body, html').addClass('on'); 
+    //       $('body, html').addClass('on'); 
           
           
-        }, 500)
-      }, 500)
-    }, 1500)
+    //     }, 500)
+    //   }, 500)
+    // }, 1500)
     return (
       <Suspense fallback={<div className="pageLoad">
       <div className="inner">

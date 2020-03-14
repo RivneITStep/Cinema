@@ -6,7 +6,13 @@ import { register } from "../../action/authAction";
 import history from '../../history';
 import './registration.css';
 class SignUpForm extends Component {
-
+    constructor() {
+        super();
+        // this.handleExpired = this.handleExpired.bind(this);
+        // this.handleErrored = this.handleErrored.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleRecaptchaRef = this.handleRecaptchaRef.bind(this);
+      }
     state = {
         email: '',
         name: '',
@@ -38,6 +44,7 @@ class SignUpForm extends Component {
 
     handleChange = (e) => {
         this.setStateByErrors(e.target.name, e.target.value);
+      
     }
 
 
@@ -49,7 +56,6 @@ class SignUpForm extends Component {
         if (this.state.password === '') errors.password = "Поле не може бути пустим."
         if (this.state.confPassword === '') errors.confPassword = "Поле не може бути пустим."
         if (this.state.password !== this.state.confPassword) errors.confPassword = "Поле не може бути пустим.Пароль має містити А-Я,а-я,0-9,та символи, пароль не може містити менш ніж 8 символів"
-
         const isValid = Object.keys(errors).length === 0
         if (isValid) {
             const { password, name, email } = this.state;
@@ -64,9 +70,7 @@ class SignUpForm extends Component {
             this.setState({ errors });
         }
     }
-
     render() {
-
         const { errors, isLoading } = this.state;
         const form = (
             <form onSubmit={this.onSubmitForm} className="form" id="form-content">
@@ -127,9 +131,6 @@ class SignUpForm extends Component {
                         placeholder="confPassword"
                         onChange={this.handleChange} />
                 </div>
-
-
-
                 <div className="form-group">
                     <div className="col-md-12" >
                         <button type="submit" className="btnSubmit"
@@ -140,14 +141,15 @@ class SignUpForm extends Component {
             </form>
         );
         return (
-                form
-        );
+            
+            form
+            );
+      }
     }
-}
-
 
 SignUpForm.propTypes = {
     register: PropTypes.func.isRequired
 }
+
 
 export default connect(null, { register })(SignUpForm);

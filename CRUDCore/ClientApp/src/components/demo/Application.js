@@ -10,6 +10,8 @@ import './defaults.css'
 import './range.css'
 import './App.css'
 import './players.css'
+
+import 'typeface-roboto'
 import ReactPlayer from '../../Player/ReactPlayer'
 
 
@@ -189,6 +191,7 @@ class Application extends Component {
                     <div className="media mt-5" id="photo">
                         <a className="pr-3" >
                             <p className="form-content" > </p>
+                            {/* <FavoriteOutlinedIcon >favorite_border</FavoriteOutlinedIcon> */}
                         </a>
                         <div className="media-body">
                             <h5 className="mt-0" id='text_g'>  Название:&nbsp;Телохранитель
