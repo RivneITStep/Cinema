@@ -213,7 +213,13 @@ body {
     margin-left: 60px;
   }
 }
-
+@media (max-width: 680px)
+{
+  #container{
+    height: 535px;
+    margin-top: 15px;
+  }
+}
 @media (max-width:570px)
 {
   #container {
