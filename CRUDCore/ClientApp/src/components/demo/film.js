@@ -187,21 +187,20 @@ class Application extends Component {
                         </a>
                         <div className="media-body">
                         <h5 className="mt-0" id='text_g'>
-                                Название:&nbsp;Max&nbsp;Steel
-                                <br /><br />
-                                Год&nbsp;выхода:&nbsp;2016
-                                <br /><br />
-                                Актеры:&nbsp;Бен&nbsp;Уинчелл,Джош&nbsp;Бренер,Мария&nbsp;Белло,
-                                Энди&nbsp;Гарсиа,Ана&nbsp;Вийафанья
-                                Режиссер:&nbsp;Стюарт&nbsp;Хендлер
-                                <br /><br />
-                                Страна:&nbsp;Великобритания,&nbsp;США
-                                <br /><br />
-                                Жанр:&nbsp;Фильмы,&nbsp;Боевики,&nbsp;Приключения,
-                                Семейные,&nbsp;Фантастика,&nbsp;Фэнтези
+                                <span id="info">Название:</span>&nbsp;Max&nbsp;Steel
+                                <br />
+                                <span id="info">Год:</span>&nbsp;выхода:&nbsp;2016
+                                <br />
+                                <span id="info">Актеры:</span>&nbsp;Бен&nbsp;Уинчелл,Джош&nbsp;Бренер,Мария&nbsp;Белло,Энди&nbsp;Гарсиа,Ана&nbsp;Вийафанья
+                                <br />
+                                <span id="info">Режиссер:</span>&nbsp;Стюарт&nbsp;Хендлер
+                                <br />
+                                <span id="info">Страна:</span>&nbsp;Великобритания,&nbsp;США
+                                <br />
+                                <span id="info">Жанр:</span>&nbsp;Фильмы,&nbsp;Боевики,&nbsp;Приключения,Семейные,&nbsp;Фантастика,&nbsp;Фэнтези
                                 </h5>
                             <br></br>
-                            <h5 className="mt-0"id='text_g'>южет данной картины закручен вокруг необычного подростка по имени Макс МакГрат. Главный герой "Макса Стила" однажды обнаруживает за собой уникальную способность генерировать мощную энергию, которая является неповторимой в своем роде во всей Вселенной.
+                            <h5 className="mt-0"id='text_g'>Сюжет данной картины закручен вокруг необычного подростка по имени Макс МакГрат. Главный герой "Макса Стила" однажды обнаруживает за собой уникальную способность генерировать мощную энергию, которая является неповторимой в своем роде во всей Вселенной.
                                 Подросток вынужден встретиться с единственным существом, способным совладать с такой мощной энергией — таинственным техноорганическим инопланетянином по имени Стил. Эта встреча кардинальным образом изменит жизнь не только нашего мальчика-подростка, но и возможно всего человечества.
                             </h5>
                         </div>
@@ -252,14 +251,15 @@ class Application extends Component {
                     <Row>
                         <div>
                             <div className="App">
+                            <div>
                                 <textarea className="textarea"
                                     placeholder="Текст коментария"
                                     name="comment"
                                     value={this.state.form.comment}
-                                    onChange={this.handleChange}>
-                                </textarea>
-                                <br/>
+                                    onChange={this.handleChange}></textarea>
                                 <button className="addComment" onClick={this.addComment}>Отправить</button>
+                                </div> 
+                                <br/>
                                 {this.state.comments.map(comment => <div className="CommentPlace" key={comment.id}>
                                 <span className="comment">{user.name}</span>
                                 <br></br>

@@ -2,6 +2,9 @@
     color: white;
     font-size: 30px;
 }
+col{
+  z-index: -1 ;
+}
 .scrol{
     overflow: scroll auto; 
     width: 1111px; 
@@ -28,14 +31,15 @@
     height: 500px;
   }
 .cab{
-    background: url(../../image/bet.png) no-repeat;
-    width: 500px;
-    height: 500px;
+  background: url(../../image/bet.png) no-repeat;
+    width: 300px;
+    height: 300px;
     margin-left:40px;
+    z-index: 1000;
 }
 .cabtext{
     margin-left: 350px;
-    margin-top: -500px;
+    margin-top: -300px;
     width: 1000px;
 }
 .carousel{
@@ -96,7 +100,48 @@
   outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+.imgUpload {
+  width: 200px;
+  cursor: pointer;
+}
+.croppermodal {
+  background-color: rgba(34, 40, 46, 0.781);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.croppermodal.open {
+  display: block;
+}
+.croppermodal .position-center {
+  position: fixed;
+  width: 175px; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+ 
+.croppermodal .position-center i {
+  font-size: 150px;
+}
+.croppermodal .box{
+  display: inline-block;
+  padding: 10px;
+  box-sizing: border-box;
 
+
+}
+.croppermodal .img-preview{
+  overflow: hidden;
+
+}
+.contain{
+  margin-top: 300px;
+  color: white;
+}
 @media screen and ( min-width: 768px ) {
   .flickity-button { width: 50%; }
 }
@@ -113,7 +158,7 @@
   float: left;
   margin: 10px;
   width: 80%;
-  height: 600px;
+  height: 800px;
 }
 .side{
   margin-top: 10px;
@@ -173,12 +218,12 @@
   }
   .cabtext{
     font-size: 15px;
-    margin-top: -185px;
+    margin-top: 0px;
     margin-left: 40px;
   }
   .cab{
-    width: 490px;
-    height: 490px;
+    width: 290px;
+    height: 290px;
   }
   .wrap {
     margin-left: -100px;

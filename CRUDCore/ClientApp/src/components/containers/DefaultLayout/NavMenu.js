@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-
 //import { logout } from '../../../action/authAction';
-
+import { Button } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import './Default.css';
 
@@ -21,6 +20,7 @@ export class NavMenu extends React.Component {
       isOpen: !this.state.isOpen
     });
   }
+ 
   render() {
     //console.log(this.props);
     const { isAuthenticated, user } = this.props;
@@ -37,62 +37,6 @@ export class NavMenu extends React.Component {
               </div>
             </div>
           </div>
-          {/* ////// */}
-          {/* <label htmlFor="myChk" className="btn__confirm">Genres</label>
-          <input type="checkbox" id="myChk" className="mychk" />
-          <label className="meu__modal__bg" htmlFor="myChk"></label>
-          <div className="meu__modal">
-            <table  cellSpacing="0">
-              <tbody>
-                <tr>
-                  <td className="menu_modal_leftcol">
-                    <li><input type="checkbox" />биографический</li>
-                    <li><input type="checkbox" />боевик</li>
-                    <li><input type="checkbox" />вестерн</li>
-                    <li><input type="checkbox" />военный</li>
-                    <li><input type="checkbox" />детектив</li>
-                    <li><input type="checkbox" />детский</li>
-                    <li><input type="checkbox" />документальный</li>
-                    <li><input type="checkbox" />драма</li>
-                    <li><input type="checkbox" />исторический</li>
-                    <li><input type="checkbox" />кинокомикс</li>
-                    <li><input type="checkbox" />комедия</li>
-                    <li><input type="checkbox" />короткометражный</li>
-                    <li><input type="checkbox" />криминал</li>
-                    <li><input type="checkbox" />мелодрама</li>
-                    <li><input type="checkbox" />мистика</li>
-                    <li><input type="checkbox" />мультфильм</li>
-                    <li><input type="checkbox" />научный</li>
-                    <li><input type="checkbox" />приключения</li>
-                    <li><input type="checkbox" />семейный</li>
-                    <li><input type="checkbox" />триллер</li>
-                    <li><input type="checkbox" />ужасы</li>
-                    <li><input type="checkbox" />фантастика</li>
-                    <li><input type="checkbox" />фэнтези</li>
-                  </td>
-                  <td className="menu_modal_centcol">
-                    <p>asdas</p>
-                  </td>
-                  <td className="menu_modal_rightcol">
-                    <p>asdas</p>
-                  </td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                   <td className="menu_modal_successe">
-                   <button>Successe</button>
-                   </td>
-                </tr>
-                <tr>
-                  <td className="menu_modal_close">
-                  <button>Close</button>
-                </td>
-              </tr>
-              </tfoot> 
-            </table>
-        </div> */}
-        {/* ////// */}
         <div className="search-button">
           <div className="container">
             <span className="lupa">
@@ -116,15 +60,15 @@ export class NavMenu extends React.Component {
               isAuthenticated ?
                 <Link className="menu__item" to="/profile">{user.name}</Link> :
 
-                <Link className="menu__item" to="/registration">Register</Link>
+                <Link className="menu__item" to="/registration">Регистрация</Link>
             }
           </li>
           <li className="nav-item">
             {
               isAuthenticated ?
-                <Link className="menu__item" to="/home" >LogOut</Link> :
+                <Link className="menu__item" to="/home" >Выйти</Link> :
 
-                <Link className="menu__item" to="/login">Login</Link>
+                <Link className="menu__item" to="/login">Вход</Link>
             }
           </li>
         </ul>

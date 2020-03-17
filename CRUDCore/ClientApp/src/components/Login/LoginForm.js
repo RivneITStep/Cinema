@@ -66,22 +66,22 @@ class LoginPage extends Component {
         const { errors, isLoading } = this.state;
         if (isLoading){
             
-            setTimeout(function() {
-                $('.inner div').addClass('done'); 
+        //     setTimeout(function() {
+        //         $('.inner div').addClass('done'); 
                 
-                setTimeout(function() {
-                  $('.inner div').addClass('page'); 
+        //         setTimeout(function() {
+        //           $('.inner div').addClass('page'); 
                   
-                  setTimeout(function() {
-                    $('.pageLoad').addClass('off'); 
+        //           setTimeout(function() {
+        //             $('.pageLoad').addClass('off'); 
                     
-                    $('body, html').addClass('on'); 
+        //             $('body, html').addClass('on'); 
                     
                     
-                  }, 500)
-                }, 500)
-              }, 1500)
-        }
+        //           }, 500)
+        //         }, 500)
+        //       }, 1500)
+         }
         console.log(this.props.history);
         const form = (
             <form onSubmit={this.onSubmitForm} id="form-content">
@@ -139,15 +139,15 @@ class LoginPage extends Component {
         </form>
         );
         return (
-            <Suspense fallback={<div className="pageLoad">
-      <div className="inner">
-        <div></div>
-        <div></div> 
-        <div></div>
-        <div></div>
-      </div> </div>}>
-            {form}
-        </Suspense>
+    //         <Suspense fallback={<div className="pageLoad">
+    //   <div className="inner">
+    //     <div></div>
+    //     <div></div> 
+    //     <div></div>
+    //     <div></div>
+    //   </div> </div>}>
+            form
+        //</Suspense>
         );
     }
 }

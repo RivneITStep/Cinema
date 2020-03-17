@@ -9,5 +9,6 @@ namespace CRUDCore.DAL.Entities
     public class DbUser : IdentityUser<long>
     {
         public virtual ICollection<DbUserRole> UserRoles { get; set; }
+        public string Image { get; internal set; }
     }
 }

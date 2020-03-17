@@ -1,3 +1,7 @@
+body{
+  max-width: 2000px;
+  min-width: 400px;
+}
 .custommodal {
   background-color: rgba(163, 137, 106, 0.849);
   display: none;
@@ -24,16 +28,16 @@
 a {
   text-decoration: none;
   color: #ffffff;
-  font-size: 10em;
+  /* font-size: 10em; */
   display: block;
   padding: 10px 15px;
   margin: 10px ;
-  transition: font-weight .20s;
+  /* transition: font-weight .20s; */
 }
  
-a:hover, a.active {
+/* a:hover, a.active {
   font-size: 30px;  
-}
+} */
 
 .foto{
   border-radius: 10px;
@@ -103,7 +107,7 @@ body {
   line-height:.9;
   font-weight:bold; 
   width: 210px;
-  height: 370px;
+  height: 380px;
   background-image: linear-gradient(180deg,rgba(31,29,29,.507),rgba(155,144,144,.507) 40%,rgba(27,25,25,.507));
   border: 2px;
   border-color: #fff;
@@ -114,7 +118,9 @@ body {
   text-align: center;
   margin-left: 50px;
 }
-
+p{
+  margin: 10px;
+}
 #container {
   align-self: center;
   overflow-y:scroll;
@@ -129,9 +135,6 @@ body {
   margin-left: -620px;
   z-index: -1;
   font-family: Georgia, 'Bowlby One SC', Times, serif;
-  box-shadow: 20px 20px 5px 0 rgba(0,0,0,.2);
-  border: solid 2px black;
-  border-radius: 50px;
 }
 #container2 {
   margin-bottom: 100px;

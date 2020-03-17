@@ -194,16 +194,17 @@ class Application extends Component {
                             {/* <FavoriteOutlinedIcon >favorite_border</FavoriteOutlinedIcon> */}
                         </a>
                         <div className="media-body">
-                            <h5 className="mt-0" id='text_g'>  Название:&nbsp;Телохранитель
-                                Оригинальное&nbsp;название:&nbsp;London&nbsp;Boulevard
-                                Год:&nbsp;2010
-                                Страна:&nbsp;США,&nbsp;Великобритания
-                                Слоган:&nbsp;«Not&nbsp;every&nbsp;criminal&nbsp;wants&nbsp;to&nbsp;be&nbsp;one.»
-                                Режиссер:&nbsp;Уильям&nbsp;Монахэн
-                                Жанр:&nbsp;Драмы,Криминальные
-                                Время:&nbsp;01:40:23
-                                Цикл:&nbsp;Фильмы&nbsp;про&nbsp;преступников
-                                Доп.язык озвучки:&nbsp;Английский
+                            <h5 className="mt-0" id='text_g'>  
+                                <span id="info">Название:</span>&nbsp;Телохранитель<br/>
+                                <span id="info">Оригинальное</span>&nbsp;название:&nbsp;London&nbsp;Boulevard<br/>
+                                <span id="info">Год:</span>&nbsp;2010<br/>
+                                <span id="info">Страна:</span>&nbsp;США,&nbsp;Великобритания<br/>
+                                <span id="info">Слоган:</span>&nbsp;«Not&nbsp;every&nbsp;criminal&nbsp;wants&nbsp;to&nbsp;be&nbsp;one.»<br/>
+                                <span id="info">Режиссер:</span>&nbsp;Уильям&nbsp;Монахэн<br/>
+                                <span id="info">Жанр:</span>&nbsp;Драмы,Криминальные<br/>
+                                <span id="info">Время:</span>&nbsp;01:40:23<br/>
+                                <span id="info">Цикл:</span>&nbsp;Фильмы&nbsp;про&nbsp;преступников<br/>
+                                <span id="info">Доп.язык озвучки:</span>&nbsp;Английский<br/>
                                 В&nbsp;главных&nbsp;ролях:&nbsp;Колин&nbsp;Фаррелл,Кира&nbsp;Найтли,Рэй&nbsp;<br />Уинстон,Дэвид&nbsp;Тьюлис,Анна&nbsp;Фрил,Бен&nbsp;Чаплин,
                                 Эдди&nbsp;Марсан,Санджив&nbsp;Бхаскар,&nbsp;Стивен&nbsp;Грэм,<br />Офелия&nbsp;Ловибонд</h5>
                             <h5 className="mt-0"id='text_g'>
@@ -259,19 +260,19 @@ class Application extends Component {
                 </Row>
                 <Row>
                         <div className="App">
-                            <div>
+                         <div>
                                 <textarea className="textarea"
                                     placeholder="Текст коментария"
                                     name="comment"
                                     value={this.state.form.comment}
                                     onChange={this.handleChange}></textarea>
                                 <button className="addComment" onClick={this.addComment}>Отправить</button>
-                                </div>
+                                </div> 
                                 <div>
                                 {this.state.comments.map(comment => <div className="CommentPlace" key={comment.id}>
                                     <span className="comment">{user.name}</span>
                                     <br></br>
-                                    <span className="comment" style={{ fontStyle: 'Calibri' }}>{format(comment.date, 'DD/MMM/YYYY/HH:mm:ss')}</span>
+                                    <span className="comment" style={{ fontStyle: 'Calibri' }}>{format(comment.date, 'DD MMMM YYYY.HH:mm')}</span>
                                     <br></br>
                                     <span className="comment">{comment.comment}</span>
                                 </div>)}

@@ -23,7 +23,7 @@ class Add_film extends React.Component {
       
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Назва фільма</span>
+            <span class="input-group-text" id="basic-addon1">Назва фільму</span>
           </div>
           <input type="text" class="form-control" placeholder="Назва фільма" aria-label="Username" aria-describedby="basic-addon1" />
         </div>
@@ -44,14 +44,14 @@ class Add_film extends React.Component {
         </div>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon1">Актори </span>
+            <span class="input-group-text" id="basic-addon1">Актори</span>
           </div>
           <input type="text" class="form-control" placeholder="Актори" aria-label="Режисер" aria-describedby="basic-addon2" />
         </div>
         <label for="basic-url"></label>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text" id="basic-addon3">Силка на фільм</span>
+            <span class="input-group-text" id="basic-addon3">Ссилка на фільм</span>
           </div>
           <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" />
         </div>
@@ -75,7 +75,7 @@ class Add_film extends React.Component {
         <br></br>
         <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">розташування</label>
+            <label class="input-group-text" for="inputGroupSelect01">Розташування</label>
           </div>
           <select class="custom-select" id="inputGroupSelect01">
             <option selected>В якій кардці буде знаходитися</option>
