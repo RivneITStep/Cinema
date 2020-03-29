@@ -23,24 +23,24 @@ class Application extends Component {
     //     };
     state = {
         url: null,
-        pip: false,
+        pip: true,
         playing: true,
         controls: true,
-        light: false,
+        light: true,
         volume: 0.8,
         muted: true,
         played: 0,
         loaded: 0,
         duration: 0,
         playbackRate: 1.0,
-        loop: false
+        loop: true
     }
     load = url => {
         this.setState({
             url,
             played: 0,
             loaded: 0,
-            pip: false
+            pip: true
         })
     }
     playPause = () => {
