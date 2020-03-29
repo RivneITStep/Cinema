@@ -70,13 +70,13 @@ class Home extends Component {
                             </div>
                             </div>
                         </div>
-                        <div className="box"><div>тест</div></div>
-                        <div className="box"><div>1</div></div>
-                        <div className="box"><div>2</div></div>
-                        <div className="box"><div>3</div></div>
-                        <div className="box"><div>4</div></div>
-                        <div className="box"><div>5</div></div>
-                        <div className="box"><div>6</div></div>
+                        <div className="box"><div><Link className="foto3" to="/app_film"></Link></div></div>
+                        <div className="box"><div><Link className="foto4" to="/app_film"></Link></div></div>
+                        <div className="box"><div><Link className="foto5" to="/app_film"></Link></div></div>
+                        <div className="box"><div><Link className="foto6" to="/app_film"></Link></div></div>
+                        <div className="box"><div><Link className="foto7" to="/app_film"></Link></div></div>
+                        <div className="box"><div><Link className="foto8" to="/app_film"></Link></div></div>
+                        <div className="box"><div><Link className="foto9" to="/app_film"></Link></div></div>
                     </div>
                 </div>
             </div>

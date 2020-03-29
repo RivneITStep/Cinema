@@ -65,6 +65,69 @@ a:hover, a.active {
   height: 280px;
   
 }
+.foto3 {
+    border-radius: 10px;
+    border: 3px solid black;
+    background: url(../../image/cap.jpg) no-repeat;
+    background-size: contain;
+    margin-left: 12px;
+    width: 188px;
+    height: 286px;
+}
+.foto4 {
+    border-radius: 10px;
+    border: 3px solid black;
+    background: url(../../image/gal.jpg) no-repeat;
+    background-size: contain;
+    margin-left: 12px;
+    width: 188px;
+    height: 286px;
+}
+.foto5 {
+    border-radius: 10px;
+    border: 3px solid black;
+    background: url(../../image/djo.jpg) no-repeat;
+    background-size: contain;
+    margin-left: 12px;
+    width: 188px;
+    height: 286px;
+}
+.foto6 {
+    border-radius: 10px;
+    border: 3px solid black;
+    background: url(../../image/alad.jpg) no-repeat;
+    background-size: contain;
+    margin-left: 12px;
+    width: 188px;
+    height: 286px;
+}
+.foto7 {
+    border-radius: 10px;
+    border: 3px solid black;
+    background: url(../../image/tem.jpg) no-repeat;
+    background-size: contain;
+    margin-left: 12px;
+    width: 188px;
+    height: 286px;
+}
+.foto8 {
+    border-radius: 10px;
+    border: 3px solid black;
+    background: url(../../image/man.jpg) no-repeat;
+    background-size: contain;
+    margin-left: 12px;
+    width: 188px;
+    height: 286px;
+}
+.foto9 {
+    border-radius: 10px;
+    border: 3px solid black;
+    background: url(../../image/tor.jpg) no-repeat;
+    background-size: contain;
+    margin-left: 12px;
+    width: 188px;
+    height: 286px;
+}
 .main{
   height: 100%;
   width:100%;
